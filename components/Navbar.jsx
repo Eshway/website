@@ -17,13 +17,13 @@ const Navbar = () => (
       className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}
     >
       <img
-        src="/logo_black.png"
+        src="/search.svg"
         alt="search"
-        className="w-[50px] h-[50px] object-contain"
+        className="w-[24px] h-[24px] object-contain"
       />
-      {/* <h2 className="font-extrabold text-[24px] leading-[30.24px] text-white">
-        ESHWAY
-      </h2> */}
+      <h2 className="font-extrabold text-[24px] leading-[30.24px] text-white">
+        <img src="/logo.png" className="w-[80px]" alt="" />
+      </h2>
       <img
         src="/menu.svg"
         alt="menu"
