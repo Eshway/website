@@ -1,28 +1,33 @@
 export const exploreWorlds = [
   {
     id: 'world-1',
-    imgUrl: '/planet-01.png',
-    title: 'The Hogwarts',
+    imgUrl: '/E_nobg.png',
+    title: 'Eshller',
+    pos: 'Founder',
   },
   {
     id: 'world-2',
-    imgUrl: '/planet-02.png',
-    title: 'The Upside Down',
+    imgUrl: '/L_nobg.png',
+    title: 'Likhitha',
+    pos: 'Core Team',
   },
   {
     id: 'world-3',
-    imgUrl: '/planet-03.png',
-    title: 'Kadirojo Permai',
+    imgUrl: '/V_nobg.png',
+    title: 'Vallabh',
+    pos: 'Core Team',
   },
   {
     id: 'world-4',
-    imgUrl: '/planet-04.png',
-    title: 'Paradise Island',
+    imgUrl: '/A_nobg.png',
+    title: 'Akshat',
+    pos: 'Core Team',
   },
   {
     id: 'world-5',
     imgUrl: '/planet-05.png',
     title: 'Hawkins Labs',
+    pos: 'Core Team',
   },
 ];
 
@@ -49,8 +54,8 @@ export const newFeatures = [
 
 export const insights = [
   {
-    imgUrl: '/planet-06.png',
-    title: 'The launch of the Metaverse makes Elon musk ketar-ketir',
+    imgUrl: '/web.png',
+    title: 'Web Development',
     subtitle:
         'Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Diam maecenas sed enim ut sem viverra alique.',
   },
