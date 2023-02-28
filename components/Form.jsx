@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
 // import { ChevronDownIcon } from '@heroicons/react/20/solid'
 // import { Switch } from '@headlessui/react'
+import { useRouter } from 'next/router';
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
-function handleSubmit() {
-  alert('Successfully Submitted');
-}
 const Form = () => {
+  const router = useRouter();
+
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(' ');
+  }
+  function handleSubmit() {
+    setTimeout(() => {
+      router.push('https://eshway.netlify.app');
+    }, 2);
+    alert('Successfully Submitted');
+  }
   const [agreed, setAgreed] = useState();
   return (
     <div className="isolate bg-transparent px-6 lg:px-8">
-      <form action="/" method="POST" className="mx-auto mt-16 max-w-xl">
+      <form method="POST" className="mx-auto mt-16 max-w-xl">
         <div className="grid grid-cols-1 gap-y-6 gap-x-8 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-white">
