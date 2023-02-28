@@ -6,7 +6,7 @@ import WhatsNew from './WhatsNew';
 import World from './World';
 import Insights from './Insights';
 import Feedback from './Feedback';
-import Services from './Services'
+import Services from './Services';
 
 export {
   Hero,

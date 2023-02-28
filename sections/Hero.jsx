@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-
+import Link from 'next/link';
 import styles from '../styles';
 import { slideIn, staggerContainer, textVariant } from '../utils/motion';
 
@@ -54,16 +54,18 @@ const Hero = () => (
         />
       </motion.div>
     </motion.div>
-    <motion.button
-      variants={textVariant(1.3)}
-      initial="hidden"
-      whileInView="show"
-      whileHover={{ scale: '1.1' }}
-      viewport={{ once: false, amount: 0.25 }}
-      className="absolute bottom-[20px] right-[600px] button rounded-full bg-[#d96dfd] w-[120px] h-[50px] hover:bg-blue-200 hover:text-white hover:scale-110 hover:ease-linear hover:duration-300 ease-out duration-300 font-mono" type="button"
-    >
-      Let's Talk
-    </motion.button>
+    <Link href="/contact">
+      <motion.button
+        variants={textVariant(1.3)}
+        initial="hidden"
+        whileInView="show"
+        whileHover={{ scale: '1.1' }}
+        viewport={{ once: false, amount: 0.25 }}
+        className="absolute bottom-[20px] right-[600px] button rounded-full bg-[#d96dfd] w-[120px] h-[50px] hover:bg-blue-200 hover:text-white hover:scale-110 hover:ease-linear hover:duration-300 ease-out duration-300 font-mono" type="button"
+      >
+        Let's Talk
+      </motion.button>
+    </Link>
   </section>
 );
 

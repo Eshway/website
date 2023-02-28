@@ -1,25 +1,25 @@
 export const exploreWorlds = [
   {
     id: 'world-1',
-    imgUrl: '/E_nobg.png',
+    imgUrl: '/E_nobg.webp',
     title: 'Eshller',
     pos: 'Founder',
   },
   {
     id: 'world-2',
-    imgUrl: '/L_nobg.png',
+    imgUrl: '/L_nobg.webp',
     title: 'Likhitha',
     pos: 'Core Team',
   },
   {
     id: 'world-3',
-    imgUrl: '/V_nobg.png',
+    imgUrl: '/V_nobg.webp',
     title: 'Vallabh',
     pos: 'Core Team',
   },
   {
     id: 'world-4',
-    imgUrl: '/A_nobg.png',
+    imgUrl: '/A_nobg.webp',
     title: 'Akshat',
     pos: 'Core Team',
   },
@@ -32,23 +32,23 @@ export const exploreWorlds = [
 ];
 
 export const startingFeatures = [
-  'Find a world that suits you and you want to enter',
-  'Enter the world by reading basmalah to be safe',
-  'No need to beat around the bush, just stay on the gas and have fun',
+  'Contact the team by filling the form',
+  'Get quotation and the prototype',
+  'Your product will be ready to deliever in the shortest span possible',
 ];
 
 export const newFeatures = [
   {
-    imgUrl: '/vrpano.svg',
-    title: 'A new world',
+    imgUrl: '/dollar.png',
+    title: 'Not satisfied with the service?',
     subtitle:
-        'we have the latest update with new world for you to try never mind',
+        'You can come back to us for infinite revisions at free of cost*',
   },
   {
-    imgUrl: '/headset.svg',
-    title: 'More realistic',
+    imgUrl: '/time.png',
+    title: 'High-end service at low prices',
     subtitle:
-        'In the latest update, your eyes are narrow, making the world more realistic than ever',
+        'Get high-end service at extremely reasonable competitive prices',
   },
 ];
 
@@ -74,20 +74,51 @@ export const insights = [
 ];
 
 export const socials = [
-  {
-    name: 'twitter',
-    url: '/twitter.svg',
-  },
+  // {
+  //   name: 'twitter',
+  //   url: '/twitter.svg',
+  //   link: 'http://twitter.com',
+  // },
   {
     name: 'linkedin',
     url: '/linkedin.svg',
+    link: 'https://www.linkedin.com/company/eshway',
   },
   {
     name: 'instagram',
     url: '/instagram.svg',
+    link: 'https://www.instagram.com/esh_way/',
+  },
+  // {
+  //   name: 'facebook',
+  //   url: '/facebook.svg',
+  //   link: 'http://twitter.com',
+  // },
+];
+
+export const feedback = [
+  {
+    id: 'feedback-1',
+    content:
+      'Web Development',
+    name: 'Herman Jensen',
+    title: 'Founder & Leader',
+    img: '/web.png',
   },
   {
-    name: 'facebook',
-    url: '/facebook.svg',
+    id: 'feedback-2',
+    content:
+      'Application Development',
+    name: 'Steve Mark',
+    title: 'Founder & Leader',
+    img: '/phone.png',
+  },
+  {
+    id: 'feedback-3',
+    content:
+      'Search Engine Optimisation',
+    name: 'Kenn Gallagher',
+    title: 'Founder & Leader',
+    img: '/seo.png',
   },
 ];
