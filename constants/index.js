@@ -54,23 +54,104 @@ export const newFeatures = [
 
 export const insights = [
   {
-    imgUrl: '/web.png',
-    title: 'Web Development',
+    imgUrl: '/antello.netlify.png',
+    title: 'Antello',
     subtitle:
-        'Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Diam maecenas sed enim ut sem viverra alique.',
+        't ',
   },
   {
-    imgUrl: '/planet-07.png',
-    title: '7 tips to easily master the madness of the Metaverse',
+    imgUrl: '/aakar bone car.png',
+    title: 'Aakar Bone Car',
     subtitle:
-        'Vitae congue eu consequat ac felis donec. Et magnis dis parturient montes nascetur ridiculus mus. Convallis tellus id interdum',
+        't ',
   },
   {
-    imgUrl: '/planet-08.png',
-    title: 'With one platform you can explore the whole world virtually',
+    imgUrl: '/FCC.png',
+    title: 'FCC',
     subtitle:
-        'Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem',
+        't ',
   },
+  {
+    imgUrl: '/fenesta.png',
+    title: 'Fenesta',
+    subtitle:
+        't ',
+  },
+  {
+    imgUrl: '/hindvanitea.png',
+    title: 'Hindvanitea',
+    subtitle:
+        't ',
+  },
+  {
+    imgUrl: '/netinfotechsystems.png',
+    title: 'Net-Infotech',
+    subtitle:
+        't ',
+  },
+  {
+    imgUrl: '/pustak shala.png',
+    title: 'Pustak Shala',
+    subtitle:
+        't ',
+  },
+  {
+    imgUrl: '/mdim.png',
+    title: 'MDIM',
+    subtitle:
+        't ',
+  },
+  {
+    imgUrl: '/kanstm.png',
+    title: 'Kanstm',
+    subtitle:
+        't ',
+  },
+  {
+    imgUrl: '/pisatower.netlify.png',
+    title: 'Pisatower Netify',
+    subtitle:
+        't ',
+  },
+  {
+    imgUrl: '/rene india.png',
+    title: 'Rene India',
+    subtitle:
+        't ',
+  },
+  {
+    imgUrl: '/shelter.png',
+    title: 'Shelter',
+    subtitle:
+        't ',
+  },
+  {
+    imgUrl: '/sivive.png',
+    title: 'Sivive',
+    subtitle:
+        't ',
+  },
+  {
+    imgUrl: '/slab wire.png',
+    title: 'Slab Wire',
+    subtitle:
+        't ',
+  },
+
+  {
+    imgUrl: '/the hide leather.png',
+    title: 'The Hide Leather',
+    subtitle:
+        ' ',
+  },
+
+  {
+    imgUrl: '/top look eyewear.png',
+    title: 'Top Look Eyewear',
+    subtitle:
+        ' ',
+  },
+
 ];
 
 export const socials = [
