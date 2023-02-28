@@ -25,8 +25,8 @@ export const exploreWorlds = [
   },
   {
     id: 'world-5',
-    imgUrl: '/planet-05.png',
-    title: 'Hawkins Labs',
+    imgUrl: '/man.png',
+    title: 'Sakshi',
     pos: 'Core Team',
   },
 ];
