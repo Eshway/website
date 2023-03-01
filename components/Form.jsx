@@ -11,7 +11,7 @@ const Form = () => {
   }
   function handleSubmit() {
     setTimeout(() => {
-      router.push('https://eshway.netlify.app');
+      router.push('https://eshway.com');
     }, 2);
     alert('Successfully Submitted');
   }
