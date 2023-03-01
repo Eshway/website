@@ -35,7 +35,9 @@ const Navbar = () => {
           { ' ' }
         </div>
         <h2 className="font-extrabold text-[24px] leading-[30.24px] text-white">
-          <img src="/logo.png" className="w-[80px]" alt="" />
+          <a href="/">
+            <img src="/logo.png" className="w-[80px]" alt="" />
+          </a>
         </h2>
         <img
           src="/menu.svg"

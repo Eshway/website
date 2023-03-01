@@ -50,7 +50,7 @@ const Hero = () => (
         <img
           src="/ill.png"
           alt="hero_cover"
-          className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
+          className="w-full lg:h-[550px] sm:h-[550px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
         />
       </motion.div>
     </motion.div>
@@ -61,7 +61,7 @@ const Hero = () => (
         whileInView="show"
         whileHover={{ scale: '1.1' }}
         viewport={{ once: false, amount: 0.25 }}
-        className="absolute bottom-[20px] right-[600px] button rounded-full bg-[#d96dfd] w-[120px] h-[50px] hover:bg-blue-200 hover:text-white hover:scale-110 hover:ease-linear hover:duration-300 ease-out duration-300 font-mono" type="button"
+        className="absolute right-[150px] bottom-[100px] hidden md:block xl:right-[750px] lg:block sm:right-[350px] sm:bottom-[100px] lg:bottom-[50px] lg:right-[650px] button rounded-full bg-[#d96dfd] sm:w-[100px] sm:h-[50px] w-[80px] h-[50px]  lg:w-[120px] lg:h-[50px] hover:bg-blue-200 hover:text-white hover:scale-110 hover:ease-linear hover:duration-300 ease-out duration-300 font-mono" type="button"
       >
         Let's Talk
       </motion.button>
