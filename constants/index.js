@@ -101,24 +101,24 @@ export const feedback = [
     id: 'feedback-1',
     content:
       'Web Development',
-    name: 'Herman Jensen',
-    title: 'Founder & Leader',
+    name: 'Web Dev',
+    title: 'Web Dev',
     img: '/web.png',
   },
   {
     id: 'feedback-2',
     content:
       'Application Development',
-    name: 'Steve Mark',
-    title: 'Founder & Leader',
+    name: 'App Dev',
+    title: 'App Dev',
     img: '/phone.png',
   },
   {
     id: 'feedback-3',
     content:
       'Search Engine Optimisation',
-    name: 'Kenn Gallagher',
-    title: 'Founder & Leader',
+    name: 'SEO',
+    title: 'SEO',
     img: '/seo.png',
   },
 ];
