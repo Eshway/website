@@ -9,7 +9,7 @@ import { fadeIn, staggerContainer } from '../utils/motion';
 
 const EshVision = () => (
   <section className={`${styles.paddings} relative z-10`} id="about">
-    <div className="gradient-02 z-0" />
+    <div className="gradient-02 z-[-1]" />
     <motion.div
       variants={staggerContainer}
       initial="hidden"
