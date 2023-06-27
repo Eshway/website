@@ -1,13 +1,15 @@
 import { Footer, Navbar } from '../components';
 import { About, Explore, Services, GetStarted, Hero, WhatsNew } from '../sections';
+import EshVision from '../sections/EshVision';
 
 const Home = () => (
   <div className="bg-primary-black overflow-hidden">
     <Navbar />
     <Hero />
     <div className="relative">
-      <Services />
       <About />
+      <Services />
+      <EshVision />
       <div className="gradient-03 z-0" />
       <Explore />
     </div>
