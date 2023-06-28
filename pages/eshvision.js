@@ -38,7 +38,7 @@ const EshVision = () => {
               InputLabelProps={{
                 style: { color: '#fff' },
               }}
-              id="outlined-basic" label="username" variant="filled" onChange={handleInput}
+              id="outlined-basic" label="username" variant="filled" onChange={handleInput} type="password"
             />
             <Button sx={{ margin: '10px', color: 'white' }} variant="contained" onClick={handleSubmit}>Login</Button>
 
