@@ -13,7 +13,7 @@ const EshVision = () => {
   const [username, setUsername] = useState(null);
   const handleInput = (e) => {
     e.preventDefault();
-    setUsername(e.target.value);
+    setUsername(e.target.value?.toLowerCase());
   };
   const handleSubmit = () => {
     list?.forEach((element) => {
