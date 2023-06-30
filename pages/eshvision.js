@@ -7,7 +7,8 @@ import Table from '../sections/Table.jsx';
 import { Feedback } from '../sections';
 
 const EshVision = () => {
-  const list = ['likhitha', 'eshller', 'vallabh', 'akshat'];
+  // const list = ['likhitha', 'eshller', 'vallabh', 'akshat'];
+  const list = ['likhitha', 'eshller', 'vallabh', 'sakshi', 'admin', 'mohitkrishna', 'ektaagarwal', 'kajal', 'nallasaisrikar', 'filzasiddiqui', 'adityamandhane', 'gauravshelke', 'piyushsoni', 'adityapratap', 'trishul', 'sangeeta', 'shivakoli', 'sankalpkushwaha', 'kamalmahour', 'vedantbhosale', 'tanishkashivhare', 'anishmahore', 'eeshasingh', 'aryanmishra', 'narender', 'meeragoyal', 'nikhilsaini', 'harshchaurasia', 'pratikshakapoor', 'rahulmj', 'sarita', 'sricharannanthakumaran', 'lalitkumar', 'anjalikapoor', 'sharvarilahane', 'adityakumarchoudhary', 'shyamk', 'laghudeepsingh', 'viyasudhirrajap', 'nashrasabiralisiddiqui', 'adwait', 'dineshp', 'ritika'];
   const [authenticated, setauthenticated] = useState(false);
   const [username, setUsername] = useState(null);
   const handleInput = (e) => {
