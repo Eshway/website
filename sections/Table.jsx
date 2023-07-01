@@ -70,8 +70,14 @@ const Table = () => (
               <td className="border border-slate-700 p-5">30th June 2023</td>
             </tr>
             <tr>
-              <td className="border border-slate-700 p-5">3.</td>
-              <td className="border border-slate-700 p-5">Coming Soon...</td>
+              <td className="border border-slate-700 p-5">4.</td>
+              <td className="border border-slate-700 p-5"><a href="https://eshller.notion.site/Advanced-HTML-f5997f3e62ed4d51b6351e28fd489ffb?pvs=4" target="_blank" className="btn btn-primary" rel="noreferrer">Advanced HTML</a></td>
+              <td className="border border-slate-700 p-5">2nd July 2023</td>
+            </tr>
+            <tr>
+              <td className="border border-slate-700 p-5">5.</td>
+              <td className="border border-slate-700 p-5"><a href="https://eshller.notion.site/Task-1-db9e419d7b884fd680077775e6fc841f?pvs=4" target="_blank" className="btn btn-primary" rel="noreferrer">Task - 1</a></td>
+              <td className="border border-slate-700 p-5">2nd July 2023</td>
             </tr>
           </tbody>
         </table>
