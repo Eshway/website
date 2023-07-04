@@ -84,11 +84,6 @@ const Table = () => (
               <td className="border border-slate-700 p-5"><a href="https://eshller.notion.site/CSS-8dc63612b48f4e4a8aa2c4e673fe5b46?pvs=4" target="_blank" className="btn btn-primary" rel="noreferrer">CSS</a></td>
               <td className="border border-slate-700 p-5">3rd July 2023</td>
             </tr>
-            <tr>
-              <td className="border border-slate-700 p-5">7.</td>
-              <td className="border border-slate-700 p-5"><a href="https://eshller.notion.site/Bootstrap-f2b2976455b748ce8a97fbf7bec7c23a?pvs=4" target="_blank" className="btn btn-primary" rel="noreferrer">Bootstrap</a></td>
-              <td className="border border-slate-700 p-5">4th July 2023</td>
-            </tr>
           </tbody>
         </table>
       </motion.p>
