@@ -8,7 +8,7 @@ import { Feedback } from '../sections';
 
 const EshVision = () => {
   // const list = ['likhitha', 'eshller', 'vallabh', 'akshat'];
-  const list = ['likhitha', 'eshller', 'vallabh', 'akshat', 'sakshi', 'admin', 'mohitkrishna', 'ektaagarwal', 'kajal', 'nallasaisrikar', 'filzasiddiqui', 'adityamandhane', 'gauravshelke', 'piyushsoni', 'adityapratap', 'trishul', 'sangeeta', 'shivakoli', 'sankalpkushwaha', 'kamalmahour', 'vedantbhosale', 'tanishkashivhare', 'anishmahore', 'eeshasingh', 'aryanmishra', 'narender', 'meeragoyal', 'nikhilsaini', 'harshchaurasia', 'pratikshakapoor', 'rahulmj', 'sarita', 'sricharannanthakumaran', 'lalitkumar', 'anjalikapoor', 'sharvarilahane', 'adityakumarchoudhary', 'shyamk', 'laghudeepsingh', 'viyasudhirrajap', 'nashrasabiralisiddiqui', 'adwait', 'dineshp', 'ritika', 'nashra', 'ameysawalkar', 'dimpal', 'teena'];
+  const list = ['likhitha', 'eshller', 'vallabh', 'akshat', 'prakhar', 'subham', 'sakshi', 'admin', 'mohitkrishna', 'ektaagarwal', 'kajal', 'nallasaisrikar', 'filzasiddiqui', 'adityamandhane', 'gauravshelke', 'piyushsoni', 'adityapratap', 'trishul', 'sangeeta', 'shivakoli', 'sankalpkushwaha', 'kamalmahour', 'vedantbhosale', 'tanishkashivhare', 'anishmahore', 'eeshasingh', 'aryanmishra', 'narender', 'meeragoyal', 'nikhilsaini', 'harshchaurasia', 'pratikshakapoor', 'rahulmj', 'sarita', 'sricharannanthakumaran', 'lalitkumar', 'anjalikapoor', 'sharvarilahane', 'adityakumarchoudhary', 'shyamk', 'laghudeepsingh', 'viyasudhirrajap', 'nashrasabiralisiddiqui', 'adwait', 'dineshp', 'ritika', 'nashra', 'ameysawalkar', 'dimpalaggarwal', 'adityakashyap'];
   const [authenticated, setauthenticated] = useState(false);
   const [username, setUsername] = useState(null);
   const handleInput = (e) => {
