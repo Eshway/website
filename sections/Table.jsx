@@ -94,6 +94,11 @@ const Table = () => (
               <td className="border border-slate-700 p-5"><a href="https://eshller.notion.site/Task-2-0b3b266483f14d39b4ca07919f3c3dc5" target="_blank" className="btn btn-primary" rel="noreferrer">Task - 2</a></td>
               <td className="border border-slate-700 p-5">6th July 2023</td>
             </tr>
+            <tr>
+              <td className="border border-slate-700 p-5">9.</td>
+              <td className="border border-slate-700 p-5"><a href="https://www.notion.so/eshller/JavaScript-d73bea34701042e09103ce34f5da2d68?pvs=4" target="_blank" className="btn btn-primary" rel="noreferrer">JavaScript</a></td>
+              <td className="border border-slate-700 p-5">7th July 2023</td>
+            </tr>
           </tbody>
         </table>
       </motion.p>
