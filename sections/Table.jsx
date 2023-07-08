@@ -97,7 +97,7 @@ const Table = () => (
             <tr>
               <td className="border border-slate-700 p-5">9.</td>
               <td className="border border-slate-700 p-5"><a href="https://www.notion.so/eshller/JavaScript-d73bea34701042e09103ce34f5da2d68?pvs=4" target="_blank" className="btn btn-primary" rel="noreferrer">JavaScript</a></td>
-              <td className="border border-slate-700 p-5">7th July 2023</td>
+              <td className="border border-slate-700 p-5">9th July 2023</td>
             </tr>
           </tbody>
         </table>
