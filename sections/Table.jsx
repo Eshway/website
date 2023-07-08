@@ -99,6 +99,11 @@ const Table = () => (
               <td className="border border-slate-700 p-5"><a href="https://www.notion.so/eshller/JavaScript-d73bea34701042e09103ce34f5da2d68?pvs=4" target="_blank" className="btn btn-primary" rel="noreferrer">JavaScript</a></td>
               <td className="border border-slate-700 p-5">9th July 2023</td>
             </tr>
+            <tr>
+              <td className="border border-slate-700 p-5">10.</td>
+              <td className="border border-slate-700 p-5"><a href="https://www.notion.so/eshller/Assignment-1-8442bb99ec6b418e8e52f4e7098f9939?pvs=4" target="_blank" className="btn btn-primary" rel="noreferrer">Assignment - 1</a></td>
+              <td className="border border-slate-700 p-5">11th July 2023</td>
+            </tr>
           </tbody>
         </table>
       </motion.p>
