@@ -37,6 +37,15 @@ export const startingFeatures = [
   'Your product will be ready to deliever in the shortest span possible',
 ];
 
+export const images = [
+  '/Front.png',
+  '/tshirtmockup.png',
+];
+
+export const productDesc = [
+  "Tech Enthusiast's Essential: Trendy Shirts with a Techie Twist",
+  'Experience Unmatched Comfort with Our Cotton Tech-Inspired T-Shirts!',
+];
 export const newFeatures = [
   {
     imgUrl: '/dollar.png',

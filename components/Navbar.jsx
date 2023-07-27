@@ -54,6 +54,7 @@ const Navbar = () => {
               <li className="pl-[70px] sm:px-[50px]"><a href="/#works">How it Works?</a></li>
               <li className="pl-[70px] sm:px-[50px]"><a href="/#new">What's New?</a></li>
               <li className="pl-[70px] sm:px-[50px]"><a href="/#contact">Contact Us</a></li>
+              <li className="pl-[70px] sm:px-[50px]"><a href="/store">Store</a></li>
             </ul>
           </div>
         ) : ' '}
