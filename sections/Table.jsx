@@ -109,6 +109,11 @@ const Table = () => (
               <td className="border border-slate-700 p-5"><a href="https://www.notion.so/eshller/ReactJs-47b2f69a585b4ebbb083351c105ab60b?pvs=4" target="_blank" className="btn btn-primary" rel="noreferrer">ReactJs</a></td>
               <td className="border border-slate-700 p-5">24th July 2023</td>
             </tr>
+            <tr>
+              <td className="border border-slate-700 p-5">12.</td>
+              <td className="border border-slate-700 p-5"><a href="https://www.notion.so/eshller/Final-Project-174d324807344945b3c4df22ef098449?pvs=4" target="_blank" className="btn btn-primary" rel="noreferrer">Final Project</a></td>
+              <td className="border border-slate-700 p-5">7th August 2023</td>
+            </tr>
           </tbody>
         </table>
       </motion.p>
