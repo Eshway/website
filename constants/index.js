@@ -38,13 +38,14 @@ export const startingFeatures = [
 ];
 
 export const images = [
-  '/Front.png',
-  '/tshirtmockup.png',
+  '/Front.webp',
+  '/tshirtmockup.webp',
 ];
 
 export const productDesc = [
+  'Free Shipping',
   "Tech Enthusiast's Essential: Trendy Shirts with a Techie Twist",
-  'Experience Unmatched Comfort with Our Cotton Tech-Inspired T-Shirts!',
+  // 'Experience Unmatched Comfort with Our Cotton Tech-Inspired T-Shirts!',
 ];
 export const newFeatures = [
   {

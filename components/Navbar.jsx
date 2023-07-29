@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
+import Link from 'next/link';
 import styles from '../styles';
 import { navVariants } from '../utils/motion';
 
@@ -48,13 +49,13 @@ const Navbar = () => {
         {menu ? (
           <div className="absolute right-5 top-[60px] text-secondary-white z-[5]">
             <ul>
-              <li className="pl-[70px] sm:px-[50px] m-auto"><a href="/#services">Services</a></li>
-              <li className="pl-[70px] sm:px-[50px]"><a href="/#about">About Eshway</a></li>
-              <li className="pl-[70px] sm:px-[50px]"><a href="/#team">The Team</a></li>
-              <li className="pl-[70px] sm:px-[50px]"><a href="/#works">How it Works?</a></li>
-              <li className="pl-[70px] sm:px-[50px]"><a href="/#new">What's New?</a></li>
-              <li className="pl-[70px] sm:px-[50px]"><a href="/#contact">Contact Us</a></li>
-              <li className="pl-[70px] sm:px-[50px]"><a href="/store">Store</a></li>
+              <li className="pl-[70px] sm:px-[50px] m-auto"><Link href="/#services">Services</Link></li>
+              <li className="pl-[70px] sm:px-[50px]"><Link href="/#about">About Eshway</Link></li>
+              <li className="pl-[70px] sm:px-[50px]"><Link href="/#team">The Team</Link></li>
+              <li className="pl-[70px] sm:px-[50px]"><Link href="/#works">How it Works?</Link></li>
+              <li className="pl-[70px] sm:px-[50px]"><Link href="/#new">What's New?</Link></li>
+              <li className="pl-[70px] sm:px-[50px]"><Link href="/#contact">Contact Us</Link></li>
+              <li className="pl-[70px] sm:px-[50px]"><Link href="/store">Store</Link></li>
             </ul>
           </div>
         ) : ' '}

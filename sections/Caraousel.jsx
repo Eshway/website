@@ -26,7 +26,6 @@ const Carousel = () => {
                 <Image
                   key={image.id}
                   src={image}
-                  image="/Front.png"
                   fill="fill"
                   style={{ objectFit: 'contain' }}
                   className="animate-fadeIn"

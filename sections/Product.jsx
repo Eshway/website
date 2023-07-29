@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 
 import { Button } from '@mui/material';
+import Link from 'next/link';
 import styles from '../styles';
 import { productDesc } from '../constants';
 import { StartSteps, TitleText, TypingText } from '../components';
@@ -33,7 +34,7 @@ const Product = (props) => {
         </motion.div>
         <motion.div
           variants={fadeIn('left', 'tween', 0.2, 1)}
-          className="flex-[0.75] flex justify-center flex-col"
+          className="flex-[0.75] flex justify-center flex-col md:items-start items-center"
         >
           <TypingText title="| Official" />
           <TitleText title={<>Eshway Merchandise</>} />
@@ -46,7 +47,8 @@ const Product = (props) => {
                 img="/check.png"
               />
             ))}
-            <Button className="btn btn-primary bg-[#323f5d] text-blue-200 hover:text-secondary-white">Buy Now ₹{price}</Button>
+            {/* className="btn btn-primary bg-[#323f5d] text-blue-200 hover:text-secondary-white" */}
+            <Button variant="contained" sx={{ background: '#323f5d !important' }}><Link href="https://forms.gle/wUXdw4nRxo41mYDe7" target="_blank" rel="noopener noreferrer">Buy Now ₹{price}</Link></Button>
           </div>
         </motion.div>
       </motion.div>
