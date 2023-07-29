@@ -48,7 +48,7 @@ const Product = (props) => {
               />
             ))}
             {/* className="btn btn-primary bg-[#323f5d] text-blue-200 hover:text-secondary-white" */}
-            <Button variant="contained" sx={{ background: '#323f5d !important' }}><Link href="https://forms.gle/wUXdw4nRxo41mYDe7" target="_blank" rel="noopener noreferrer">Buy Now ₹{price}</Link></Button>
+            <Link href="https://forms.gle/wUXdw4nRxo41mYDe7" target="_blank" rel="noopener noreferrer"><Button className="w-[100%] bg-[#323f5d]" variant="contained">Buy Now ₹{price}</Button></Link>
           </div>
         </motion.div>
       </motion.div>
