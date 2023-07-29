@@ -7,6 +7,7 @@ import World from './World';
 import Insights from './Insights';
 import Feedback from './Feedback';
 import Services from './Services';
+import Merch from './Merch';
 
 export {
   Hero,
@@ -17,5 +18,6 @@ export {
   World,
   Insights,
   Feedback,
+  Merch,
   Services,
 };

@@ -1,5 +1,5 @@
 import { Footer, Navbar } from '../components';
-import { About, Explore, Services, GetStarted, Hero, WhatsNew } from '../sections';
+import { About, Explore, Services, GetStarted, Hero, WhatsNew, Merch } from '../sections';
 import EshVision from '../sections/EshVision';
 
 const Home = () => (
@@ -9,14 +9,15 @@ const Home = () => (
     <div className="relative">
       <About />
       <Services />
+      <div className="relative">
+        <GetStarted />
+        <div className="gradient-04 z-0" />
+        <WhatsNew />
+      </div>
       <EshVision />
       <div className="gradient-03 z-0" />
+      <Merch />
       <Explore />
-    </div>
-    <div className="relative">
-      <GetStarted />
-      <div className="gradient-04 z-0" />
-      <WhatsNew />
     </div>
     {/* <World />
     <div className="relative">

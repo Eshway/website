@@ -24,18 +24,19 @@ const ShopHero = () => (
           <p className="text-xl text-gray-400">Meet the Driven Minds Behind Formula Ashwariders</p>
         </div> */}
         <div className="max-w-sm mx-auto grid gap-8 lg:grid-cols-3 lg:gap-6 items-start lg:max-w-none">
-          <Link href="store/productPage">
-            <div className="flex flex-col w-full mx-auto h-full p-6 bg-gray-800" data-aos="fade-up" key="POKemon">
+
+          <div className="flex flex-col w-full mx-auto h-full p-6 bg-gray-800" data-aos="fade-up" key="POKemon">
+            <Link href="store/productPage">
               <div className="text-center">
                 <div className="relative inline-flex flex-col mb-4">
-                  <img className="rounded-[10px]" src="/Front.png" width="500" height="500" alt="Testimonial 01" />
+                  <img className="rounded-[10px]" src="/Front.webp" width="500" height="500" alt="Testimonial 01" />
                 </div>
               </div>
-              <div className="text-gray-700 font-medium text-xl mt-6 pt-5 border-t border-gray-700">
-                <cite className="text-gray-200 not-italic">Eshway Merchandise </cite><a className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out" href="#0">₹ 399</a>
-              </div>
+            </Link>
+            <div className="text-gray-700 font-medium text-xl mt-6 pt-5 border-t border-gray-700">
+              <cite className="text-gray-200 not-italic">Eshway Merchandise </cite><a className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out" href="#0">₹ 399</a>
             </div>
-          </Link>
+          </div>
           {/* <div className="flex flex-col w-full mx-auto h-full p-6 bg-gray-800" data-aos="fade-up" key="POKemon">
             <div className="text-center">
               <div className="relative inline-flex flex-col mb-4">
