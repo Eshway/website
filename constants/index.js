@@ -23,12 +23,6 @@ export const exploreWorlds = [
     title: 'Akshat',
     pos: 'Core Team',
   },
-  {
-    id: 'world-5',
-    imgUrl: '/S_nobg.png',
-    title: 'Sakshi',
-    pos: 'Core Team',
-  },
 ];
 
 export const startingFeatures = [
