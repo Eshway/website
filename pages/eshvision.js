@@ -46,7 +46,7 @@ const EshVision = () => {
           </div>
         )}
         <div className="text-white text-center font-bold">
-          Not Registered? Click : <a href="https://forms.gle/zxnNxp6kb4Bc71G26" className="text-blue-200 hover:text-white">Registration Link</a>
+          Not Registered? Click : <a href="https://forms.gle/WC4vf5itBtnTxXZV7" className="text-blue-200 hover:text-white">Registration Link</a>
           <div className="gradient-03 z-0" />
         </div>
         <Feedback />
