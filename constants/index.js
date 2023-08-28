@@ -126,3 +126,9 @@ export const feedback = [
     img: '/seo.png',
   },
 ];
+
+export const eshvision = [
+  { id: '1', topic: 'Before we Start', deadline: '1st September', url: 'https://notion.io', testLink: 'google' },
+  { id: '2', topic: 'Introduction to HTML', deadline: '2nd September', url: 'https://notion.io', testLink: 'google' },
+  { id: '3', topic: 'Advanced HTML', deadline: '3rd September', url: 'https://notion.io', testLink: 'google' },
+];

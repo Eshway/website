@@ -48,7 +48,7 @@ const Footer = () => (
 
           <div className="flex gap-4">
             {socials.map((social) => (
-              <a href={social.link} target="_blank" rel="noopener noreferrer">
+              <a key={social.name} href={social.link} target="_blank" rel="noopener noreferrer">
                 <img
                   key={social.name}
                   src={social.url}
