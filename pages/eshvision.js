@@ -1,36 +1,19 @@
-import { useState } from 'react';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
+// import { useState } from 'react';
+// import TextField from '@mui/material/TextField';
+// import Button from '@mui/material/Button';
 import { Footer, Navbar } from '../components';
 import EshVisionHero from '../sections/EshVisionHero.jsx';
 import Table from '../sections/Table.jsx';
 import { Feedback } from '../sections';
 
-const EshVision = () => {
-  // const list = ['likhitha', 'eshller', 'vallabh', 'akshat'];
-  const list = ['likhitha', 'eshller', 'vallabh', 'akshat', 'prakhar', 'subham', 'sakshi', 'admin', 'mohitkrishna', 'ektaagarwal', 'kajal', 'nallasaisrikar', 'filzasiddiqui', 'adityamandhane', 'gauravshelke', 'piyushsoni', 'adityapratap', 'trishul', 'sangeeta', 'shivakoli', 'sankalpkushwaha', 'kamalmahour', 'vedantbhosale', 'tanishkashivhare', 'anishmahore', 'eeshasingh', 'aryanmishra', 'narender', 'meeragoyal', 'nikhilsaini', 'harshchaurasia', 'pratikshakapoor', 'rahulmj', 'sarita', 'sricharannanthakumaran', 'lalitkumar', 'anjalikapoor', 'sharvarilahane', 'adityakumarchoudhary', 'shyamk', 'laghudeepsingh', 'viyasudhirrajap', 'nashrasabiralisiddiqui', 'adwait', 'dineshp', 'ritika', 'nashra', 'ameysawalkar', 'dimpalaggarwal', 'adityakashyap', 'teena', 'prashasti'];
-  const [authenticated, setauthenticated] = useState(false);
-  const [username, setUsername] = useState(null);
-  const handleInput = (e) => {
-    e.preventDefault();
-    setUsername(e.target.value?.toLowerCase());
-  };
-  const handleSubmit = () => {
-    list?.forEach((element) => {
-      if (username === element) {
-        setauthenticated(true);
-      }
-    });
-  };
-  // if()
-  return (
-    <div className="bg-primary-black overflow-hidden">
-      <Navbar />
-      <EshVisionHero />
-      <div className="relative">
-        {/* {authenticated ? ( */}
-        <Table />
-        {/* ) : (
+const EshVision = () => (
+  <div className="bg-primary-black overflow-hidden">
+    <Navbar />
+    <EshVisionHero />
+    <div className="relative">
+      {/* {authenticated ? ( */}
+      <Table />
+      {/* ) : (
           <div className="text-center">
             <h1 className="text-transparent bg-clip-text font-bold lg:text-[34px] md:text-[30px] sm:text-[24px] text-[25px] uppercase font-mono bg-gradient-to-tl from-[#1a232e] to-blue-300">
               LOGIN HERE
@@ -47,14 +30,29 @@ const EshVision = () => {
 
           </div>
         )} */}
-        <div className="text-white text-center font-bold">
-          Not Registered? Click : <a href="https://forms.gle/WC4vf5itBtnTxXZV7" className="text-blue-200 hover:text-white">Registration Link</a>
-          <div className="gradient-03 z-[-1]" />
-        </div>
-        <Feedback />
+      <div className="text-white text-center font-bold">
+        Not Registered? Click : <a href="https://forms.gle/WC4vf5itBtnTxXZV7" className="text-blue-200 hover:text-white">Registration Link</a>
+        <div className="gradient-03 z-[-1]" />
       </div>
-      <Footer />
+      <Feedback />
     </div>
-  );
-};
+    <Footer />
+  </div>
+);
 export default EshVision;
+// const list = ['likhitha', 'eshller', 'vallabh', 'akshat'];
+// const list = ['likhitha', 'eshller', 'vallabh', 'akshat', 'prakhar', 'subham', 'sakshi', 'admin', 'mohitkrishna', 'ektaagarwal', 'kajal', 'nallasaisrikar', 'filzasiddiqui', 'adityamandhane', 'gauravshelke', 'piyushsoni', 'adityapratap', 'trishul', 'sangeeta', 'shivakoli', 'sankalpkushwaha', 'kamalmahour', 'vedantbhosale', 'tanishkashivhare', 'anishmahore', 'eeshasingh', 'aryanmishra', 'narender', 'meeragoyal', 'nikhilsaini', 'harshchaurasia', 'pratikshakapoor', 'rahulmj', 'sarita', 'sricharannanthakumaran', 'lalitkumar', 'anjalikapoor', 'sharvarilahane', 'adityakumarchoudhary', 'shyamk', 'laghudeepsingh', 'viyasudhirrajap', 'nashrasabiralisiddiqui', 'adwait', 'dineshp', 'ritika', 'nashra', 'ameysawalkar', 'dimpalaggarwal', 'adityakashyap', 'teena', 'prashasti'];
+// const [authenticated, setauthenticated] = useState(false);
+// const [username, setUsername] = useState(null);
+// const handleInput = (e) => {
+//   e.preventDefault();
+//   setUsername(e.target.value?.toLowerCase());
+// };
+// const handleSubmit = () => {
+//   list?.forEach((element) => {
+//     if (username === element) {
+//       setauthenticated(true);
+//     }
+//   });
+// };
+// if()
