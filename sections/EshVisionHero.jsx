@@ -55,16 +55,16 @@ const EshVisionHero = () => (
       </motion.div>
     </motion.div>
     <Link href="/:id">
-      <motion.button
+      {/* <motion.button
         variants={textVariant(1.3)}
         initial="hidden"
         whileInView="show"
         whileHover={{ scale: '1.1' }}
         viewport={{ once: false, amount: 0.25 }}
-        className="absolute z-[-1] right-[150px] bottom-[100px] hidden md:block xl:right-[700px] lg:block sm:right-[350px] sm:bottom-[100px] lg:bottom-[50px] lg:right-[580px] button rounded-full bg-[#d96dfd] sm:w-[100px] sm:h-[50px] w-[80px] h-[50px]  lg:w-[120px] lg:h-[50px] hover:bg-blue-200 hover:text-white hover:scale-110 hover:ease-linear hover:duration-300 ease-out duration-300 font-mono" type="button"
+        className="absolute z-[1] right-[150px] bottom-[100px] hidden md:block xl:right-[700px] lg:block sm:right-[350px] sm:bottom-[100px] lg:bottom-[50px] lg:right-[580px] button rounded-full bg-[#d96dfd] sm:w-[100px] sm:h-[50px] w-[80px] h-[50px]  lg:w-[120px] lg:h-[50px] hover:bg-blue-200 hover:text-white hover:scale-110 hover:ease-linear hover:duration-300 ease-out duration-300 font-mono" type="button"
       >
         Explore
-      </motion.button>
+      </motion.button> */}
     </Link>
   </section>
 );
