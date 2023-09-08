@@ -12,7 +12,9 @@ import { TypingText } from '../components';
 
 const Table = () => {
   const [completed, setCompleted] = useState(false);
+  const [completedTwo, setCompletedTwo] = useState(false);
   const [ans, setAns] = useState();
+  const [ans2, setAns2] = useState();
   const handleOneKey = (qn) => {
     if (qn === '1' && ans === 'esh28') {
       setCompleted(true);
@@ -22,6 +24,17 @@ const Table = () => {
   };
   const handleAns = (answer) => {
     setAns(answer.target.value);
+    // console.log('THIS IS THE ANSWER :', answer.target.value);
+  };
+  const handleTwoKey = () => {
+    if (ans2 === 'esh01q') {
+      setCompletedTwo(true);
+    } else {
+      alert('Wrong Passcode');
+    }
+  };
+  const handleTwoAns = (answer) => {
+    setAns2(answer.target.value);
     console.log('THIS IS THE ANSWER :', answer.target.value);
   };
 
@@ -122,7 +135,7 @@ const Table = () => {
               <tr>
                 <td className="border border-slate-700 p-5">1</td>
                 <td className="border border-slate-700 p-5">Before we start</td>
-                <td className="border border-slate-700 p-5">2th September</td>
+                <td className="border border-slate-700 p-5">2nd September</td>
                 <td className="border border-slate-700 p-5">No Assessment</td>
                 <td className="border border-slate-700 p-5"><a href="https://eshller.notion.site/Before-we-start-dffc29d9110d4603b175c5bab851025d" target="_blank" className="btn text-blue-200" rel="noreferrer">Click here</a></td>
               </tr>
@@ -142,6 +155,19 @@ const Table = () => {
                   <>
                     <TextField onChange={(event) => handleAns(event)} InputLabelProps={{ style: { color: '#fff' } }} sx={{ color: 'white !important' }} variant="outlined" label="Enter key" />
                     <Button variant="outlined" onClick={() => handleOneKey('1')}>Submit</Button>
+                  </>
+                )}
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-slate-700 p-5">3</td>
+                <td className="border border-slate-700 p-5">CSS</td>
+                <td className="border border-slate-700 p-5">14th September</td>
+                <td className="border border-slate-700 p-5"><a href="https://forms.gle/yKhArJMHBjEV9jou5" target="_blank" rel="noopener noreferrer">Assessment</a></td>
+                <td className="border border-slate-700 p-5">{completedTwo ? (<a href="https://eshller.notion.site/CSS-8dc63612b48f4e4a8aa2c4e673fe5b46?pvs=4" target="_blank" className="btn btn-primary text-blue-200" rel="noreferrer">Click here</a>) : (
+                  <>
+                    <TextField onChange={(event) => handleTwoAns(event)} InputLabelProps={{ style: { color: '#fff' } }} sx={{ color: 'white !important' }} variant="outlined" label="Enter key" />
+                    <Button variant="outlined" onClick={handleTwoKey}>Submit</Button>
                   </>
                 )}
                 </td>
