@@ -13,8 +13,10 @@ import { TypingText } from '../components';
 const Table = () => {
   const [completed, setCompleted] = useState(false);
   const [completedTwo, setCompletedTwo] = useState(false);
+  const [completedThird, setCompletedThird] = useState(false);
   const [ans, setAns] = useState();
   const [ans2, setAns2] = useState();
+  const [ans3, setAns3] = useState();
   const handleOneKey = (qn) => {
     if (qn === '1' && ans === 'esh28') {
       setCompleted(true);
@@ -34,7 +36,19 @@ const Table = () => {
     }
   };
   const handleTwoAns = (answer) => {
-    setAns2(answer.target.value);
+    setAns3(answer.target.value);
+    console.log('THIS IS THE ANSWER :', answer.target.value);
+  };
+
+  const handleThirdKey = () => {
+    if (ans3 === 'eshvision2.0') {
+      setCompletedThird(true);
+    } else {
+      alert('Wrong Passcode');
+    }
+  };
+  const handleThirdAns = (answer) => {
+    setAns3(answer.target.value);
     console.log('THIS IS THE ANSWER :', answer.target.value);
   };
 
@@ -168,6 +182,19 @@ const Table = () => {
                   <>
                     <TextField onChange={(event) => handleTwoAns(event)} InputLabelProps={{ style: { color: '#fff' } }} sx={{ color: 'white !important' }} variant="outlined" label="Enter key" />
                     <Button variant="outlined" onClick={handleTwoKey}>Submit</Button>
+                  </>
+                )}
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-slate-700 p-5">4</td>
+                <td className="border border-slate-700 p-5">JavaScript</td>
+                <td className="border border-slate-700 p-5">23rd September</td>
+                <td className="border border-slate-700 p-5"><a href="https://forms.gle/dzaSpqA8XkFxdE5H9" target="_blank" rel="noopener noreferrer">Assessment</a></td>
+                <td className="border border-slate-700 p-5">{completedThird ? (<a href="https://eshller.notion.site/JavaScript-d73bea34701042e09103ce34f5da2d68" target="_blank" className="btn btn-primary text-blue-200" rel="noreferrer">Click here</a>) : (
+                  <>
+                    <TextField onChange={(event) => handleThirdAns(event)} InputLabelProps={{ style: { color: '#fff' } }} sx={{ color: 'white !important' }} variant="outlined" label="Enter key" />
+                    <Button variant="outlined" onClick={handleThirdKey}>Submit</Button>
                   </>
                 )}
                 </td>
