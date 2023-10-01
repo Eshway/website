@@ -36,7 +36,7 @@ const Table = () => {
     }
   };
   const handleTwoAns = (answer) => {
-    setAns3(answer.target.value);
+    setAns2(answer.target.value);
     console.log('THIS IS THE ANSWER :', answer.target.value);
   };
 
