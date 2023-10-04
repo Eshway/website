@@ -14,9 +14,13 @@ const Table = () => {
   const [completed, setCompleted] = useState(false);
   const [completedTwo, setCompletedTwo] = useState(false);
   const [completedThird, setCompletedThird] = useState(false);
+  const [completedFourth, setCompletedFourth] = useState(false);
   const [ans, setAns] = useState();
   const [ans2, setAns2] = useState();
   const [ans3, setAns3] = useState();
+  const [ans4, setAns4] = useState();
+
+
   const handleOneKey = (qn) => {
     if (qn === '1' && ans === 'esh28') {
       setCompleted(true);
@@ -50,6 +54,17 @@ const Table = () => {
   const handleThirdAns = (answer) => {
     setAns3(answer.target.value);
     console.log('THIS IS THE ANSWER :', answer.target.value);
+  };
+  const handleFourthKey = () => {
+    if (ans4 === 'abcd') {
+      setCompletedFourth(true);
+    } else {
+      alert('Wrong Passcode');
+    }
+  };
+  const handleFourthAns = (answer) => {
+    setAns4(answer.target.value);
+    // console.log('THIS IS THE ANSWER :', answer.target.value);
   };
 
   return (
@@ -195,6 +210,19 @@ const Table = () => {
                   <>
                     <TextField onChange={(event) => handleThirdAns(event)} InputLabelProps={{ style: { color: '#fff' } }} sx={{ color: 'white !important' }} variant="outlined" label="Enter key" />
                     <Button variant="outlined" onClick={handleThirdKey}>Submit</Button>
+                  </>
+                )}
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-slate-700 p-5">5</td>
+                <td className="border border-slate-700 p-5">Introduction to React JS</td>
+                <td className="border border-slate-700 p-5">12th October</td>
+                <td className="border border-slate-700 p-5"><a href="https://forms.gle/dzaSpqA8XkFxdE5H9" target="_blank" rel="noopener noreferrer">Assessment</a></td>
+                <td className="border border-slate-700 p-5">{completedFourth ? (<a href="https://eshller.notion.site/ReactJs-47b2f69a585b4ebbb083351c105ab60b?pvs=4" target="_blank" className="btn btn-primary text-blue-200" rel="noreferrer">Click here</a>) : (
+                  <>
+                    <TextField onChange={(event) => handleFourthAns(event)} InputLabelProps={{ style: { color: '#fff' } }} sx={{ color: 'white !important' }} variant="outlined" label="Enter key" />
+                    <Button variant="outlined" onClick={handleFourthKey}>Submit</Button>
                   </>
                 )}
                 </td>
