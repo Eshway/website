@@ -56,7 +56,7 @@ const Table = () => {
     console.log('THIS IS THE ANSWER :', answer.target.value);
   };
   const handleFourthKey = () => {
-    if (ans4 === 'abcd') {
+    if (ans4 === 'react101') {
       setCompletedFourth(true);
     } else {
       alert('Wrong Passcode');
@@ -218,7 +218,7 @@ const Table = () => {
                 <td className="border border-slate-700 p-5">5</td>
                 <td className="border border-slate-700 p-5">Introduction to React JS</td>
                 <td className="border border-slate-700 p-5">12th October</td>
-                <td className="border border-slate-700 p-5"><a href="https://forms.gle/dzaSpqA8XkFxdE5H9" target="_blank" rel="noopener noreferrer">Assessment</a></td>
+                <td className="border border-slate-700 p-5"><a href="https://forms.gle/4gDGzLUJqSGxpEHY6" target="_blank" rel="noopener noreferrer">Assessment</a></td>
                 <td className="border border-slate-700 p-5">{completedFourth ? (<a href="https://eshller.notion.site/ReactJs-47b2f69a585b4ebbb083351c105ab60b?pvs=4" target="_blank" className="btn btn-primary text-blue-200" rel="noreferrer">Click here</a>) : (
                   <>
                     <TextField onChange={(event) => handleFourthAns(event)} InputLabelProps={{ style: { color: '#fff' } }} sx={{ color: 'white !important' }} variant="outlined" label="Enter key" />
