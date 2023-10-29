@@ -22,7 +22,7 @@ const MyApp = ({ Component, pageProps }) => (
         rel="stylesheet"
         href="https://stijndv.com/fonts/Eudoxus-Sans.css"
       />
-      <Script src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-3MY67GFCTB" />
       <Script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];

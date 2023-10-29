@@ -5,7 +5,7 @@ import EshVision from '../sections/EshVision';
 
 const Home = () => (
   <div className="bg-primary-black overflow-hidden">
-    <Script src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" />
+    <Script src="https://www.googletagmanager.com/gtag/js?id=G-3MY67GFCTB" />
     <Script id="google-analytics">
       {`
           window.dataLayer = window.dataLayer || [];
