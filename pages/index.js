@@ -2,6 +2,7 @@ import Script from 'next/script';
 import { Footer, Navbar } from '../components';
 import { About, Explore, Services, GetStarted, Hero, WhatsNew, Merch } from '../sections';
 import EshVision from '../sections/EshVision';
+import Testimonials from '../components/Testimonials';
 
 const Home = () => (
   <div className="bg-primary-black overflow-hidden">
@@ -29,6 +30,7 @@ const Home = () => (
       <div className="gradient-03 z-0" />
       <Merch />
       <Explore />
+      <Testimonials />
     </div>
     {/* <World />
     <div className="relative">

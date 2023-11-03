@@ -1,28 +1,35 @@
 export const exploreWorlds = [
   {
-    id: 'world-1',
+    id: '1',
     imgUrl: '/E_nobg.webp',
     title: 'Eshller',
     pos: 'Founder',
   },
   {
-    id: 'world-2',
+    id: '2',
     imgUrl: '/L_nobg.webp',
     title: 'Likhitha',
     pos: 'Core Team',
   },
   {
-    id: 'world-3',
+    id: '3',
     imgUrl: '/V_nobg.webp',
     title: 'Vallabh',
     pos: 'Core Team',
   },
   {
-    id: 'world-4',
+    id: '4',
     imgUrl: '/A_nobg.webp',
     title: 'Akshat',
     pos: 'Core Team',
   },
+  {
+    id: '5',
+    imgUrl: '/nakshita.webp',
+    title: 'Nakshita',
+    pos: 'Core Team',
+  },
+
 ];
 
 export const startingFeatures = [
@@ -131,4 +138,12 @@ export const eshvision = [
   { id: '1', topic: 'Before we Start', deadline: '1st September', url: 'https://notion.io', testLink: 'google' },
   { id: '2', topic: 'Introduction to HTML', deadline: '2nd September', url: 'https://notion.io', testLink: 'google' },
   { id: '3', topic: 'Advanced HTML', deadline: '3rd September', url: 'https://notion.io', testLink: 'google' },
+];
+
+export const testimonials = [
+  { id: '1', name: 'Eknoor Singh', company: 'Speezy', logo: 'https://media.licdn.com/dms/image/C4D0BAQFypz5GTWfe0g/company-logo_200_200/0/1673103068185?e=1704326400&v=beta&t=nogzLKRMtVsgYX9Y0tpFQXBliZhKMhzUBQWte3af91w', pic: '/eknoor.png', star: '5', exp: 'Great work so far, loved the fact that Eshu personally took it up! Looking forward to the final product' },
+  { id: '2', name: 'Abhishek Pai Angle', company: '', logo: 'https://www.ribin.in/assets/SiteLogo-b873c477.png', pic: '/abhishek.png', star: '5', exp: 'Great work. They could exactly replicate the design into website and the speed was super quick. Eshu personally solved all the issue I had in quickest of time. Would definitely work with them again!' },
+  { id: '3', name: 'Sujas Jain', company: 'Abhyuday', logo: 'abhyuday', pic: '', star: '5', exp: 'Work execution was smooth and task was done on time!' },
+  { id: '4', name: 'Formula AshwaRiders', company: 'Formula Ashwariders', logo: 'https://formulaashwariders.in/assets/logo-e2d299f2.png', pic: 'https://raw.githubusercontent.com/Eshller/formulaashwariders/main/public/images/t7.jpeg', star: '5', exp: 'Exceptional work! The website is fantastic, and we appreciate your team\'s expertise and professionalism.' },
+  { id: '5', name: 'Aryan Goyal', company: 'thirtyml', logo: 'https://raw.githubusercontent.com/aryangoyal7/Frontend_trial/main/src/favicon.png', pic: '/aryan.png', star: '5', exp: 'It was very personalised and they did multiple iterations according to my requirements' },
 ];
