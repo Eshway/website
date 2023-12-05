@@ -22,10 +22,10 @@ const Inter_iit = () => (
         <div className="feedback-gradient" />
         <div>
           <h4 className="font-bold sm:text-[32px] text-[26px] sm:leading-[40.32px] leading-[36.32px] text-white">
-            Contact Us
+            Support
           </h4>
           <p className="mt-[8px] font-normal sm:text-[18px] text-[12px] sm:leading-[22.68px] leading-[16.68px] text-white">
-            Get Quotation for free!!
+            Fill Details To Delete Account
           </p>
         </div>
 
@@ -45,27 +45,6 @@ const Inter_iit = () => (
         </div>
       </motion.div>
 
-      <motion.div
-        variants={fadeIn('left', 'tween', 0.2, 1)}
-        className="relative flex-[0.5] flex justify-center items-center"
-      >
-        <img
-          src="/contact.png"
-          alt="contact US"
-          className="w-full lg:h-[610px] h-[100%] min-h-[210px] object-cover rounded-[40px]"
-        />
-
-        <motion.div
-          variants={zoomIn(0.4, 1)}
-          className="lg:block hidden absolute -left-[10%] top-[3%]"
-        >
-          {/* <img
-            src="/stamp.png"
-            alt="stamp"
-            className="w-[155px] h-[155px] object-contain"
-          /> */}
-        </motion.div>
-      </motion.div>
     </motion.div>
   </section>
 );
