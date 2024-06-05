@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { staggerContainer, textVariant } from "../utils/motion";
+import { motion } from 'framer-motion';
+import { staggerContainer, textVariant } from '../utils/motion';
 
 const Privacy = () => (
   <section className="bg-primary-black py-8 sm:pl-16 pl-6 flex flex-col">
