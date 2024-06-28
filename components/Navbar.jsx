@@ -33,11 +33,11 @@ const Navbar = () => {
           className="w-[24px] h-[24px] object-contain"
         /> */}
         <div>
-          { ' ' }
+          {' '}
         </div>
         <h2 className="font-extrabold text-[24px] leading-[30.24px] text-white">
           <a href="/">
-            <img src="/logo.png" className="w-[80px]" alt="" />
+            <img src="/black.png" className="w-[80px]" alt="" />
           </a>
         </h2>
         <img
