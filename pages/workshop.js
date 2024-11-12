@@ -1,22 +1,14 @@
-// import { useState } from 'react';
-// import TextField from '@mui/material/TextField';
-// import Button from '@mui/material/Button';
-import { useEffect, useState } from 'react';
-import { Button, TextField } from '@mui/material';
 import { Footer, Navbar } from '../components';
-import EshVisionHero from '../sections/EshVisionHero.jsx';
-import Table from '../sections/Table.jsx';
 import { Feedback } from '../sections';
 import WorkshopHero from '../sections/WorkshopHero.jsx';
 
-const EshVision = () => {
-  return (
-    <div className="bg-primary-black overflow-hidden">
-      <Navbar />
-      {/* HERE IS{process.env.NEXT_PUBLIC_SHEET_ID} */}
-      <WorkshopHero />
-      <div className="relative">
-        {/* {authenticated ? (
+const EshVision = () => (
+  <div className="bg-primary-black overflow-hidden">
+    <Navbar />
+    {/* HERE IS{process.env.NEXT_PUBLIC_SHEET_ID} */}
+    <WorkshopHero />
+    <div className="relative">
+      {/* {authenticated ? (
           <Table />
         ) : (
           <div className="text-center">
@@ -55,10 +47,9 @@ const EshVision = () => {
           </a>
           <div className="gradient-03 z-[-1]" />
         </div> */}
-        <Feedback />
-      </div>
-      <Footer />
+      <Feedback />
     </div>
-  );
-};
+    <Footer />
+  </div>
+);
 export default EshVision;
