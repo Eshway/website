@@ -1,15 +1,21 @@
 // pages/api/fetchSheetData.js
 import { google } from 'googleapis';
-import path from 'path';
 
 export default async function handler(req, res) {
   try {
     // Authenticate using the service account
-    const auth = new google.auth.GoogleAuth({
-      keyFile: path.join(process.cwd(), process.env.GOOGLE_APPLICATION_CREDENTIALS),
-      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-    });
+    // const auth = new google.auth.GoogleAuth({
+    //   keyFile: path.join(process.cwd(), process.env.GOOGLE_APPLICATION_CREDENTIALS),
+    //   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+    // });
 
+    const auth = new google.auth.JWT(
+      process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL,
+      null,
+      process.env.NEXT_PUBLIC_GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+      ['https://www.googleapis.com/auth/spreadsheets'],
+      null,
+    );
     const sheets = google.sheets({ version: 'v4', auth });
     const spreadsheetId = process.env.NEXT_PUBLIC_SHEET_ID;
     const range = 'Username!A2:A32';
