@@ -27,7 +27,7 @@ const EshVisionHero = () => (
           className="flex flex-row justify-center items-center my-4"
         >
           <h1 className="text-transparent bg-clip-text font-bold lg:text-[34px] md:text-[30px] sm:text-[24px] text-[25px] uppercase font-mono bg-gradient-to-tl from-[#1a232e] to-blue-300">
-            Freelancer Development Program | Unlock Your Potential | 15th August
+            Freelancer Development Program | Unlock Your Potential
           </h1>
         </motion.div>
       </div>
