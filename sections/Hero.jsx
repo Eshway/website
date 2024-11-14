@@ -9,8 +9,8 @@ import { slideIn, staggerContainer, textVariant } from '../utils/motion';
 // text-white font-bold lg:text-[34px] md:text-[100px] sm:text-[60px] text-[44px] uppercase '
 // `;
 const Hero = () => (
+  <div className="w-100 h-100">
   <section className={`${styles.yPaddings} sm:pl-16 pl-6 flex flex-col lg:flex-row`}>
-
     <motion.div
       variants={staggerContainer}
       initial="hidden"
@@ -54,6 +54,8 @@ const Hero = () => (
         />
       </motion.div>
     </motion.div>
+  </section>
+    <div className="flex align-middle text-center justify-center items-center w-100">
     <Link href="/contact">
       <motion.button
         variants={textVariant(1.3)}
@@ -61,12 +63,14 @@ const Hero = () => (
         whileInView="show"
         whileHover={{ scale: '1.1' }}
         viewport={{ once: false, amount: 0.25 }}
-        className="absolute z-[0] right-[150px] bottom-[100px] hidden md:block xl:right-[700px] lg:block sm:right-[330px] sm:bottom-[100px] lg:bottom-[50px] lg:right-[600px] button rounded-full bg-[#d96dfd] sm:w-[100px] sm:h-[50px] w-[80px] h-[50px]  lg:w-[120px] lg:h-[50px] hover:bg-blue-200 hover:text-white hover:scale-110 hover:ease-linear hover:duration-300 ease-out duration-300 font-mono" type="button"
+        // className="z-[0] right-[150px] bottom-[100px] hidden md:block xl:right-[700px] lg:block sm:right-[330px] sm:bottom-[100px] lg:bottom-[50px] lg:right-[600px] button rounded-full bg-[#d96dfd] sm:w-[100px] sm:h-[50px] w-[80px] h-[50px]  lg:w-[120px] lg:h-[50px] hover:bg-blue-200 hover:text-white hover:scale-110 hover:ease-linear hover:duration-300 ease-out duration-300 font-mono" type="button"
+        className="z-[0] hidden md:block lg:block button rounded-full bg-[#d96dfd] sm:w-[100px] sm:h-[50px] w-[80px] h-[50px]  lg:w-[120px] lg:h-[50px] hover:bg-blue-200 hover:text-white hover:scale-110 hover:ease-linear hover:duration-300 ease-out duration-200 font-mono" type="button"
       >
         Let's Talk
       </motion.button>
     </Link>
-  </section>
+    </div>
+  </div>
 );
 
 export default Hero;
