@@ -18,7 +18,7 @@ export default async function handler(req, res) {
     );
     const sheets = google.sheets({ version: 'v4', auth });
     const spreadsheetId = process.env.NEXT_PUBLIC_SHEET_ID;
-    const range = 'Username!A2:A32';
+    const range = 'Username!A2:A';
 
     // Fetch data from Google Sheets
     const response = await sheets.spreadsheets.values.get({
