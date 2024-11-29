@@ -1,22 +1,51 @@
-import About from '@/components/About';
-import Divider from '@/components/Divider';
-import { Hero } from '@/components/Hero';
-import Navbar from '@/components/Navbar';
-import Services from '@/components/Services';
-import StaticHero from '@/components/StaticHero';
-import { Testimonial } from '@/components/Testimonial';
+import Script from 'next/script';
 
-export default function Home() {
-  return (
-    <div className='font-karla'>
-      <Navbar />
-      <StaticHero />
-      {/* <Hero /> */}
-      <Divider />
+import { About, Explore, Services, GetStarted, Hero, WhatsNew, Merch } from './sections';
+
+import { Navbar, Footer, Testimonials } from '@/components';
+import EshVision from './sections/EshVision';
+import './styles/globals.css'
+
+const Home = () => (
+  <div className="bg-primary-black overflow-hidden">
+    <Script src="https://www.googletagmanager.com/gtag/js?id=G-3MY67GFCTB" />
+    <Script id="google-analytics">
+      {`
+          function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+          o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+          o.onload=function(){window.trackingFunctions.onLoad({appId:"663f29bfa8928601c7633aee"})},
+          document.head.appendChild(o)}initApollo();
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-3MY67GFCTB');
+        `}
+    </Script>
+    <Navbar />
+    <Hero />
+    <div className="relative">
       <About />
       <Services />
-      <Divider />
-      <Testimonial />
+      <div className="relative">
+        <GetStarted />
+        <div className="gradient-04 z-0" />
+        <WhatsNew />
+      </div>
+      <EshVision />
+      <div className="gradient-03 z-0" />
+      <Merch />
+      <Explore />
+      <Testimonials />
     </div>
-  );
-}
+    {/* <World />
+    <div className="relative">
+      <Insights />
+      <div className="gradient-04 z-0" />
+      <Feedback />
+    </div> */}
+    <Footer />
+  </div>
+);
+
+export default Home;

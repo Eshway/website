@@ -1,5 +1,6 @@
 import React from 'react';
 import { HorizontalScrollCarousel } from './HorizontalScrollCarousel';
+import Image from 'next/image';
 
 const Services = () => {
   return (
@@ -7,7 +8,7 @@ const Services = () => {
       <div className='mx-auto max-w-screen-xl px-4 py-8 pb-0 sm:pb-0 lg:pb-0 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
         <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16'>
           {/* <div className='relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-full'> */}
-          <img
+          <Image
             alt=''
             src='/hand.png'
             className='relative h-full w-full object-cover bottom-0 md:bottom-40'
