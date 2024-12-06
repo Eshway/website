@@ -4,10 +4,7 @@ module.exports = {
     './app/**/*.{html,js,jsx}',
     './components/**/*.{html,js,jsx}',
     './sections/**/*.{html,js,jsx}',
-    './styles/**/*.{js,jsx}', './app/**/*.{html,js,jsx,ts,tsx}',
-    './components/**/*.{html,js,jsx,ts,tsx}',
-    './sections/**/*.{html,js,jsx,ts,tsx}',
-    './styles/**/*.{js,jsx,ts,tsx}',
+    './styles/**/*.{js,jsx}',
   ],
   mode: 'jit',
   theme: {

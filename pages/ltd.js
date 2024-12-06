@@ -11,14 +11,20 @@ const LTD = () => (
         titleComponent={(
           <h1 className="text-4xl font-semibold text-black dark:text-white">
             Unleash the power of <br />
-            <span className="text-5xl md:text-[6rem] font-extrabold mt-1 leading-none">
-              Live <span className="text-yellow-200">Tracking</span> Dashboard
+            <span className="text-6xl md:text-[6rem] font-bold mt-1 leading-none">
+              Magency
             </span>
           </h1>
-        )}
+        //   <h1 className="text-4xl font-semibold text-black dark:text-white">
+        //     Unleash the power of <br />
+        //     <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+        //       Magency
+        //     </span>
+        //   </h1>
+      )}
       >
         <Image
-          src="/ltd/home.png"
+          src="/bg.png"
           alt="hero"
           height={720}
           width={1400}
@@ -34,7 +40,6 @@ const LTD = () => (
           ready to commit you can get started for free.
         </p>
       </section>
-      <h2 className="text-5xl text-yellow-200">POKEMON</h2>
     </div>
   </main>
 );
