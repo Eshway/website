@@ -1,12 +1,12 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
-import styles from '../styles';
-import { exploreWorlds } from '../constants';
-import { staggerContainer } from '../utils/motion';
 import { ExploreCard, TitleText, TypingText } from '../components';
+import { team } from '../constants';
+import styles from '../styles';
+import { staggerContainer } from '../utils/motion';
 
 const Explore = () => {
   const [active, setActive] = useState('world-1');
@@ -26,7 +26,7 @@ const Explore = () => {
           textStyles="text-center"
         />
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
-          {exploreWorlds.map((world, index) => (
+          {team.map((world, index) => (
             <ExploreCard
               key={world.id}
               {...world}

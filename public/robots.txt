@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://ltd.eshway.com
+Host: https://eshway.com
 
 # Sitemaps
-Sitemap: https://ltd.eshway.com/sitemap.xml
+Sitemap: https://eshway.com/sitemap.xml

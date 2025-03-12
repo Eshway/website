@@ -51,6 +51,7 @@ const Navbar = () => {
             <ul>
               <li className="pl-[70px] sm:px-[50px] m-auto"><Link href="/#services">Services</Link></li>
               <li className="pl-[70px] sm:px-[50px]"><Link href="/#about">About Eshway</Link></li>
+              <li className="pl-[70px] sm:px-[50px]"><Link href="/ltd" target="_blank" rel="noreferrer">LTD</Link></li>
               <li className="pl-[70px] sm:px-[50px]"><Link href="/#team">The Team</Link></li>
               <li className="pl-[70px] sm:px-[50px]"><Link href="/#works">How it Works?</Link></li>
               <li className="pl-[70px] sm:px-[50px]"><Link href="/#new">What's New?</Link></li>

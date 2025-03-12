@@ -1,23 +1,23 @@
 /* eslint-disable quotes */
-export const exploreWorlds = [
+export const team = [
   {
     id: "1",
     imgUrl: "/E_nobg.webp",
     title: "Eshller",
     pos: "Founder",
   },
-  {
-    id: "2",
-    imgUrl: "/L_nobg.webp",
-    title: "Likhitha",
-    pos: "Core Team",
-  },
-  {
-    id: "3",
-    imgUrl: "/V_nobg.webp",
-    title: "Vallabh",
-    pos: "Core Team",
-  },
+  // {
+  //   id: "2",
+  //   imgUrl: "/L_nobg.webp",
+  //   title: "Likhitha",
+  //   pos: "Core Team",
+  // },
+  // {
+  //   id: "3",
+  //   imgUrl: "/V_nobg.webp",
+  //   title: "Vallabh",
+  //   pos: "Core Team",
+  // },
   {
     id: "4",
     imgUrl: "/A_nobg.webp",

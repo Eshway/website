@@ -1,8 +1,9 @@
 import Script from 'next/script';
 import { Footer, Navbar } from '../components';
-import { About, Explore, Services, GetStarted, Hero, WhatsNew, Merch } from '../sections';
-import EshVision from '../sections/EshVision';
 import Testimonials from '../components/Testimonials';
+import { About, Explore, GetStarted, Hero, Merch, Services, WhatsNew } from '../sections';
+import EshVision from '../sections/EshVision';
+import LTD from '../sections/LTD';
 
 const Home = () => (
   <div className="bg-primary-black overflow-hidden">
@@ -35,9 +36,9 @@ const Home = () => (
       <Merch />
       <Explore />
       <Testimonials />
+      <LTD />
     </div>
-    {/* <World />
-    <div className="relative">
+    {/* <div className="relative">
       <Insights />
       <div className="gradient-04 z-0" />
       <Feedback />
