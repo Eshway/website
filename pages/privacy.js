@@ -20,7 +20,7 @@ const Privacy = () => (
         variants={textVariant(0.2)}
         className="text-gray-400 text-base mb-4"
       >
-        Last updated: [Date]
+        Last updated: 16th March, 2025
       </motion.p>
 
       <motion.p
