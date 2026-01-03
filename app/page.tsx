@@ -3,7 +3,6 @@ import { useLayoutEffect, useState } from "react";
 import { MobileNav, MobileNavHeader, MobileNavMenu, MobileNavToggle, Navbar, NavbarButton, NavbarLogo, NavBody, NavItems } from "@/components/ui/resizable-navbar";
 import Hero from "@/components/sections/hero";
 import ThemeToggle from "@/components/ui/theme-toggle";
-import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "motion/react"
 import { Spotlight } from "@/components/ui/spotlight";
 import { cn } from "@/lib/utils";
