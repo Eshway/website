@@ -122,7 +122,8 @@ export const SparklesCore = (props: ParticlesProps) => {
                 },
               },
               color: {
-                value: particleColor || '#ffffff',
+                // Default to brand primary (#d86dfc)
+                value: particleColor || '#d86dfc',
                 animation: {
                   h: {
                     count: 0,
