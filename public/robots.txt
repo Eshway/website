@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://eshway.com
-
-# Sitemaps
-Sitemap: https://eshway.com/sitemap.xml
