@@ -1,3 +1,4 @@
+import { Highlighter } from "../ui/highlighter";
 import InteractiveTooltip from "../ui/interactive-tooltip";
 import { SparklesCore } from "@/components/ui/sparkles";
 
@@ -16,7 +17,7 @@ const Hero = () => {
                     id="hero-sparkles"
                     background="transparent"
                     particleDensity={300}
-                    className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
+                    className="absolute inset-x-0 bottom-0 h-full w-full mask-[radial-gradient(50%_50%,white,transparent_85%)]"
                 />
             </div>
 
@@ -36,15 +37,36 @@ const Hero = () => {
                         <p className="mt-1.5 sm:mt-1 text-[11px] sm:text-xs font-medium text-muted-foreground font-geist">140+ happy partners</p>
                     </div>
                 </div>
+                {/* Trust Badge Line */}
+                <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-medium text-muted-foreground font-inter mb-4 sm:mb-6 tracking-wide uppercase opacity-80">
+                    <span>Founded by IIT Bombay alumni</span>
+                    <span className="w-1 h-1 rounded-full bg-muted-foreground/40" />
+                    <span>140+ partners</span>
+                    <span className="w-1 h-1 rounded-full bg-muted-foreground/40" />
+                    <span>Featured on national media</span>
+                </div>
 
-                <h1 className="max-w-5xl text-foreground font-medium text-3xl sm:text-5xl md:text-7xl tracking-tight sm:tracking-tighter font-geist mx-auto leading-tight sm:leading-none" >
+                <h1 className="max-w-5xl text-foreground font-medium text-3xl sm:text-5xl md:text-7xl tracking-tight sm:tracking-tighter font-inter mx-auto leading-tight sm:leading-none" >
                     The End of the
-                    <span className="font-playfair italic font-medium text-foreground tracking-tight" > Black-Box </span>
+                    <span className="font-playfair italic font-medium text-foreground tracking-tight leading-tight" > <Highlighter action="underline" color="#D86DFC">Black-Box </Highlighter></span>
                     Digital Agency
                 </h1>
+                {/* <div className="text-center">
+                    <p className="leading-relaxed">
+                        The{" "}
+                        <Highlighter action="underline" color="#FF9800">
+                            Magic UI Highlighter
+                        </Highlighter>{" "}
+                        makes important{" "}
+                        <Highlighter action="highlight" color="#87CEFA">
+                            text stand out
+                        </Highlighter>{" "}
+                        effortlessly.
+                    </p>
+                </div> */}
 
                 <p className="max-w-2xl text-sm sm:text-lg font-normal text-muted-foreground font-geist mt-5 sm:mt-6 mx-auto leading-relaxed sm:leading-normal px-2 sm:px-0">
-                    Eshway delivers high-ticket web and software projects with complete transparency—powered by our in-house AI tracking platform.
+                    Eshway delivers enterprise-grade web and software projects with complete transparency—powered by our in-house AI tracking platform.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-3 mt-7 sm:mt-8 items-stretch sm:items-center justify-center w-full sm:w-auto px-2 sm:px-0">

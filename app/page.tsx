@@ -1,11 +1,17 @@
 "use client";
-import { useLayoutEffect, useState } from "react";
-import { MobileNav, MobileNavHeader, MobileNavMenu, MobileNavToggle, Navbar, NavbarButton, NavbarLogo, NavBody, NavItems } from "@/components/ui/resizable-navbar";
+import LogoCloud from "@/components/logo-cloud";
+import BrandSection from "@/components/sections/brand-section";
+import EshwayStandardSection from "@/components/sections/eshway-standard";
+import DeliveryModelTimelineSection from "@/components/sections/delivery-model-timeline";
 import Hero from "@/components/sections/hero";
-import ThemeToggle from "@/components/ui/theme-toggle";
-import { motion } from "motion/react"
+import ScrollVideoSection from "@/components/sections/scroll-video";
+
+import { MobileNav, MobileNavHeader, MobileNavMenu, MobileNavToggle, Navbar, NavbarButton, NavbarLogo, NavBody, NavItems } from "@/components/ui/resizable-navbar";
+import { ScrollVelocityContainer, ScrollVelocityRow } from "@/components/ui/scroll-based-velocity";
+
 import { Spotlight } from "@/components/ui/spotlight";
-import { cn } from "@/lib/utils";
+import ThemeToggle from "@/components/ui/theme-toggle";
+import { useLayoutEffect, useState } from "react";
 
 export default function Home() {
   const navItems = [
@@ -136,10 +142,16 @@ export default function Home() {
           </p>
         </div> */}
         <Hero />
+        {/* <BrandSection /> */}
+        <LogoCloud />
+        <EshwayStandardSection />
+        <DeliveryModelTimelineSection />
+
+        <ScrollVideoSection />
         {/* Example follow-up sections (pattern for scaling the landing page) */}
         <section
           id="features"
-          className="mx-auto max-w-5xl scroll-mt-[var(--nav-clearance,7rem)] px-4 py-20 sm:px-6 sm:py-28"
+          className="mx-auto max-w-5xl scroll-mt-(--nav-clearance,7rem) px-4 py-20 sm:px-6 sm:py-28"
         >
           <div className="text-center">
             <h2 className="text-2xl sm:text-3xl font-geist font-semibold text-foreground">
@@ -154,7 +166,7 @@ export default function Home() {
 
         <section
           id="pricing"
-          className="mx-auto max-w-5xl scroll-mt-[var(--nav-clearance,7rem)] px-4 py-20 sm:px-6 sm:py-28"
+          className="mx-auto max-w-5xl scroll-mt-(--nav-clearance,7rem) px-4 py-20 sm:px-6 sm:py-28"
         >
           <div className="text-center">
             <h2 className="text-2xl sm:text-3xl font-geist font-semibold text-foreground">
@@ -168,7 +180,7 @@ export default function Home() {
 
         <section
           id="contact"
-          className="mx-auto max-w-5xl scroll-mt-[var(--nav-clearance,7rem)] px-4 py-20 sm:px-6 sm:py-28"
+          className="mx-auto max-w-5xl scroll-mt-(--nav-clearance,7rem) px-4 py-20 sm:px-6 sm:py-28"
         >
           <div className="text-center">
             <h2 className="text-2xl sm:text-3xl font-geist font-semibold text-foreground">
