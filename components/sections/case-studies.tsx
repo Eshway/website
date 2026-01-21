@@ -22,11 +22,13 @@ function CaseStudyCard({
     CaseStudyDetail,
     "headline" | "industry" | "imageSrc" | "statusLabel" | "statusValue" | "tags"
 >) {
+    const titleId = `case-study-${encodeURIComponent(href)}-title`;
+
     return (
         <Link
             href={href}
             className="group relative block h-full w-full focus:outline-hidden"
-            aria-label={`Read case study: ${headline}`}
+            aria-labelledby={titleId}
         >
             <div className="mx-auto w-full max-w-5xl">
                 <div className="relative rounded-3xl border border-white/10 bg-background/25 p-4 shadow-[0_1px_0_0_hsl(var(--foreground)/0.06)_inset,0_30px_120px_-60px_rgba(0,0,0,0.75)] backdrop-blur-md transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:shadow-[0_1px_0_0_hsl(var(--foreground)/0.06)_inset,0_40px_140px_-70px_rgba(0,0,0,0.85)] group-focus-visible:ring-2 group-focus-visible:ring-fuchsia-500/40 sm:p-6">
@@ -37,7 +39,7 @@ function CaseStudyCard({
                     <div className="relative mt-4 rounded-3xl border border-fuchsia-500/40 bg-background/30 p-4 shadow-[0_0_0_1px_rgba(216,109,252,0.15),0_18px_80px_-50px_rgba(216,109,252,0.85)] backdrop-blur-md transition-shadow duration-300 group-hover:shadow-[0_0_0_1px_rgba(216,109,252,0.20),0_28px_120px_-70px_rgba(216,109,252,0.95)] sm:p-6">
                         {/* Header row */}
                         <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 font-inter text-base sm:text-lg">
-                            <span className="font-semibold text-foreground">{headline}</span>
+                            <span id={titleId} className="font-semibold text-foreground">{headline}</span>
                             <span className="text-foreground/50">|</span>
                             <span className="text-foreground/70">{industry}</span>
                         </div>
