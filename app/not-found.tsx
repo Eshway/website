@@ -15,7 +15,7 @@ export default function NotFound() {
           </div>
 
           {/* Header bar */}
-          <div className="relative flex items-center justify-between border-b border-white/10 bg-background/10 px-5 py-4">
+          <div className="relative flex items-center justify-between gap-3 border-b border-white/10 bg-background/10 px-4 py-4 sm:px-5">
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-white/25" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/18" />
@@ -24,24 +24,27 @@ export default function NotFound() {
                 eshway://kernel
               </span>
             </div>
-            <span className="font-mono text-xs text-foreground/55">
+            <span className="shrink-0 font-mono text-xs text-foreground/55">
               exception: 0x00000404
             </span>
           </div>
 
-          <div className="relative px-6 py-10 sm:px-10 sm:py-12">
+          <div className="relative px-4 py-10 sm:px-10 sm:py-12">
             <div className="font-inter text-xs tracking-[0.28em] text-[#d86dfc]/80">
               /// TERMINAL CRASH
             </div>
-            <h1 className="mt-3 font-inter text-3xl font-semibold tracking-tight sm:text-5xl">
-              ERROR 404: DIRECTORY_NOT_FOUND
+            <h1 className="mt-3 font-inter font-semibold tracking-tight text-[clamp(1.9rem,7.2vw,3rem)] sm:text-5xl">
+              <span className="block">ERROR 404:</span>
+              <span className="block break-all text-foreground/95">
+                DIRECTORY_NOT_FOUND
+              </span>
             </h1>
             <p className="mt-4 font-geist text-sm leading-relaxed text-foreground/70 sm:text-base">
               You hit a dead path. No redirects. No fake doors. Just a clean
               failure mode—like we build production systems.
             </p>
 
-            <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-black/35 p-5">
+            <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-black/35 p-4 sm:p-5">
               <div className="font-mono text-xs text-foreground/65">
                 kernel panic: attempted to resolve route
                 <span className="text-foreground/85"> &quot;{"/"}&quot;</span> →
@@ -54,7 +57,7 @@ export default function NotFound() {
               </div>
             </div>
 
-            <div className="mt-8 rounded-2xl border border-white/10 bg-background/10 px-5 py-4">
+            <div className="mt-8 rounded-2xl border border-white/10 bg-background/10 px-4 py-4 sm:px-5">
               <div className="flex flex-wrap items-center gap-x-2 gap-y-2 font-mono text-sm text-foreground/75">
                 <span className="text-emerald-300/80">eshway</span>
                 <span className="text-foreground/40">›</span>
