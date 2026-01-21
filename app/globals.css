@@ -56,7 +56,14 @@
       background-position: 100% -100%;
     }
   }
-}
+
+  --animate-grid: grid 15s linear infinite
+;
+  @keyframes grid {
+  0% {
+    transform: translateY(-50%);}
+  100% {
+    transform: translateY(0);}}}
 
 @keyframes spotlight {
   0% {
@@ -152,6 +159,23 @@
 }
 
 @layer base {
+  /* Smooth anchor navigation (navbar links) */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  /* Ensure anchored sections land below the fixed navbar */
+  section[id],
+  [id][data-anchor] {
+    scroll-margin-top: calc(var(--nav-clearance, 7rem) + 16px);
+  }
+
   * {
     @apply border-border outline-ring/50;
   }

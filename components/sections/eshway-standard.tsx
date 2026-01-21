@@ -4,7 +4,10 @@ import { Check, EyeOff, ShieldCheck } from "lucide-react";
 
 export default function EshwayStandardSection() {
     return (
-        <section className="relative overflow-hidden bg-background py-20 sm:py-24">
+        <section
+            id="eshway-standard"
+            className="relative overflow-hidden bg-background py-20 sm:py-24"
+        >
             {/* Background blur + vignette */}
             <div
                 aria-hidden="true"
@@ -12,10 +15,13 @@ export default function EshwayStandardSection() {
             >
                 {/* Keep base background consistent with the section above (avoid a visible horizontal seam) */}
                 <div className="absolute inset-0 bg-linear-to-b from-background to-background" />
-                {/* Fade the glow out near the top so it doesn't "hard cut" against the section above */}
-                <div className="absolute inset-0 mask-[linear-gradient(to_bottom,transparent,black_22%,black)]">
-                    <div className="absolute left-1/2 top-10 h-[28rem] w-[48rem] -translate-x-1/2 rounded-full bg-primary/15 blur-3xl" />
-                    <div className="absolute left-1/2 top-32 h-[22rem] w-[42rem] -translate-x-1/2 rounded-full bg-emerald-500/10 blur-3xl" />
+                {/* Subtle grid to match the "system" theme */}
+                <div className="absolute inset-0 opacity-40 [background-size:40px_40px] [background-image:linear-gradient(to_right,rgba(216,109,252,0.10)_1px,transparent_1px),linear-gradient(to_bottom,rgba(216,109,252,0.10)_1px,transparent_1px)]" />
+
+                {/* Fade in/out so the section blends with neighbors (no hard top/bottom seams) */}
+                <div className="absolute inset-0 mask-[linear-gradient(to_bottom,transparent,black_22%,black_82%,transparent)]">
+                    <div className="absolute left-1/2 top-10 h-112 w-192 -translate-x-1/2 rounded-full bg-primary/15 blur-3xl" />
+                    <div className="absolute left-1/2 top-32 h-88 w-168 -translate-x-1/2 rounded-full bg-emerald-500/10 blur-3xl" />
                 </div>
             </div>
 

@@ -1,15 +1,16 @@
 import { ScrollVelocityContainer, ScrollVelocityRow } from '../ui/scroll-based-velocity';
+import Image from "next/image";
 
 
 const LogoBadge = ({ src, alt }: { src: string; alt: string }) => {
     const resolvedSrc = src.startsWith("http") ? src : `/${src}`
     return (
         <div className="mx-5 inline-flex h-24 w-40 items-center justify-center rounded-2xl border border-border/40 bg-background/40 px-5 backdrop-blur">
-            <img
+            <Image
                 src={resolvedSrc}
                 alt={alt}
-                loading="lazy"
-                decoding="async"
+                width={160}
+                height={96}
                 draggable={false}
                 className="h-full w-auto max-w-40 object-contain opacity-80 grayscale contrast-125 brightness-125 transition hover:opacity-100 hover:grayscale-0 dark:brightness-150"
             />

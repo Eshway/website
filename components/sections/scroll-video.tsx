@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type ScrollVideoSectionProps = {
     /**
@@ -14,7 +14,8 @@ type ScrollVideoSectionProps = {
 };
 
 export default function ScrollVideoSection({
-    scrollLengthVh = 200,
+    // Slightly longer by default so the scrub feels smoother with longer videos.
+    scrollLengthVh = 150,
     className,
 }: ScrollVideoSectionProps) {
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -22,6 +23,7 @@ export default function ScrollVideoSection({
     const frameRef = useRef<HTMLDivElement | null>(null);
     const chromeRef = useRef<HTMLDivElement | null>(null);
     const baseSizeRef = useRef<{ w: number; h: number } | null>(null);
+    const [isActive, setIsActive] = useState(false);
 
     const reducedMotion = useMemo(() => {
         if (typeof window === "undefined") return false;
@@ -29,7 +31,23 @@ export default function ScrollVideoSection({
     }, []);
 
     useEffect(() => {
+        const el = containerRef.current;
+        if (!el) return;
+        // Lazy-load the video only when this section is near the viewport.
+        const io = new IntersectionObserver(
+            (entries) => {
+                const hit = entries.some((e) => e.isIntersecting);
+                if (hit) setIsActive(true);
+            },
+            { root: null, rootMargin: "600px 0px", threshold: 0.01 },
+        );
+        io.observe(el);
+        return () => io.disconnect();
+    }, []);
+
+    useEffect(() => {
         if (reducedMotion) return;
+        if (!isActive) return;
         const container = containerRef.current;
         const video = videoRef.current;
         const frame = frameRef.current;
@@ -39,11 +57,37 @@ export default function ScrollVideoSection({
         let raf = 0;
         let duration = 0;
         let lastTime = 0;
+        let pendingTime: number | null = null;
 
         const onLoadedMetadata = () => {
             duration = Number.isFinite(video.duration) ? video.duration : 0;
             video.currentTime = 0;
             lastTime = 0;
+        };
+
+        const applyTime = (t: number) => {
+            // Avoid piling on seeks; queue the latest requested time while seeking.
+            if (video.seeking) {
+                pendingTime = t;
+                return;
+            }
+
+            pendingTime = null;
+
+            // Prefer fastSeek where available (more efficient seeking on some browsers).
+            const anyVideo = video as any;
+            if (typeof anyVideo.fastSeek === "function") {
+                anyVideo.fastSeek(t);
+            } else {
+                video.currentTime = t;
+            }
+        };
+
+        const onSeeked = () => {
+            if (pendingTime == null) return;
+            const t = pendingTime;
+            pendingTime = null;
+            applyTime(t);
         };
 
         const clamp01 = (n: number) => Math.max(0, Math.min(1, n));
@@ -75,12 +119,13 @@ export default function ScrollVideoSection({
 
             // Smooth interpolation for video time (reduces jitter)
             const timeDiff = targetTime - lastTime;
-            const smoothedTime = lastTime + timeDiff * 0.5; // Smoothing factor (0.5 = balanced)
+            // Slightly stronger smoothing reduces visible "step" when scrubbing compressed videos.
+            const smoothedTime = lastTime + timeDiff * 0.35;
             lastTime = smoothedTime;
 
             // Update video time more frequently for smoother playback
-            if (Math.abs(video.currentTime - smoothedTime) > 0.005) {
-                video.currentTime = smoothedTime;
+            if (Math.abs(video.currentTime - smoothedTime) > 0.002) {
+                applyTime(smoothedTime);
             }
 
             // Zoom-in effect: start as a framed card and smoothly become full-bleed.
@@ -115,6 +160,7 @@ export default function ScrollVideoSection({
         // Ensure metadata loads and video can be scrubbed.
         // `playsInline` + `muted` avoids iOS restrictions.
         video.addEventListener("loadedmetadata", onLoadedMetadata);
+        video.addEventListener("seeked", onSeeked);
         onLoadedMetadata();
         // Measure after layout
         window.requestAnimationFrame(measureBase);
@@ -131,10 +177,11 @@ export default function ScrollVideoSection({
         return () => {
             if (raf) window.cancelAnimationFrame(raf);
             video.removeEventListener("loadedmetadata", onLoadedMetadata);
+            video.removeEventListener("seeked", onSeeked);
             window.removeEventListener("scroll", requestUpdate as any);
             // resize listener is anonymous; safe no-op in most cases, but keep cleanup minimal
         };
-    }, [reducedMotion]);
+    }, [reducedMotion, isActive]);
 
     return (
         <section
@@ -157,10 +204,12 @@ export default function ScrollVideoSection({
                         <video
                             ref={videoRef}
                             className="h-[70svh] w-full object-cover"
-                            src="/nature.mp4"
-                            preload="auto"
+                            src={isActive ? "/output.webm" : undefined}
+                            preload="metadata"
                             playsInline
                             muted
+                            // Helps Safari/iOS avoid unexpected playback behavior during scrubbing.
+                            controls={false}
                             crossOrigin="anonymous"
                         />
 

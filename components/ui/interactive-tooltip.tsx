@@ -7,6 +7,7 @@ import {
   useTransform,
 } from 'motion/react';
 import { useState } from 'react';
+import Image from "next/image";
 
 const defaultItems = [
   {
@@ -17,9 +18,9 @@ const defaultItems = [
   },
   {
     id: 2,
-    name: 'Erick Williams',
-    designation: 'CTO',
-    image: 'erick.png',
+    name: 'Aryan Honawar',
+    designation: 'CEO',
+    image: 'aryan.png',
   },
   {
     id: 3,
@@ -106,13 +107,13 @@ export default function InteractiveTooltip({
               </motion.div>
             )}
           </AnimatePresence>
-          <img
+          <Image
             onMouseMove={handleMouseMove}
             height={100}
             width={100}
-            src={item.image}
+            src={item.image.startsWith("/") ? item.image : `/${item.image}`}
             alt={item.name}
-            className="border-background ring-primary/20 group-hover:ring-primary/40 relative !m-0 h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full border-2 object-cover object-top !p-0 ring-2 transition duration-500 group-hover:z-30 group-hover:scale-105"
+            className="border-background ring-primary/20 group-hover:ring-primary/40 relative !m-0 h-10 w-10 rounded-full border-2 object-cover object-top !p-0 ring-2 transition duration-500 group-hover:z-30 group-hover:scale-105 sm:h-12 sm:w-12 md:h-14 md:w-14"
           />
         </div>
       ))}

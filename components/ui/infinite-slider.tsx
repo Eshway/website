@@ -32,9 +32,11 @@ export function InfiniteSlider({
   useEffect(() => {
     let controls;
     const size = direction === 'horizontal' ? width : height;
-    const contentSize = size + gap;
-    const from = reverse ? -contentSize / 2 : 0;
-    const to = reverse ? 0 : -contentSize / 2;
+    // We render children twice. `size` therefore measures the combined length of both tracks.
+    // For a seamless loop, we should translate by exactly ONE track length (half of `size`).
+    const oneTrack = size / 2;
+    const from = reverse ? -oneTrack : 0;
+    const to = reverse ? 0 : -oneTrack;
 
     const distanceToTravel = Math.abs(to - from);
     const duration = distanceToTravel / currentSpeed;
@@ -58,9 +60,6 @@ export function InfiniteSlider({
         repeat: Infinity,
         repeatType: 'loop',
         repeatDelay: 0,
-        onRepeat: () => {
-          translation.set(from);
-        },
       });
     }
 
@@ -79,15 +78,15 @@ export function InfiniteSlider({
 
   const hoverProps = speedOnHover
     ? {
-        onHoverStart: () => {
-          setIsTransitioning(true);
-          setCurrentSpeed(speedOnHover);
-        },
-        onHoverEnd: () => {
-          setIsTransitioning(true);
-          setCurrentSpeed(speed);
-        },
-      }
+      onHoverStart: () => {
+        setIsTransitioning(true);
+        setCurrentSpeed(speedOnHover);
+      },
+      onHoverEnd: () => {
+        setIsTransitioning(true);
+        setCurrentSpeed(speed);
+      },
+    }
     : {};
 
   return (

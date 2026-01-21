@@ -1,122 +1,31 @@
-"use client";
 import LogoCloud from "@/components/logo-cloud";
-import BrandSection from "@/components/sections/brand-section";
 import EshwayStandardSection from "@/components/sections/eshway-standard";
 import DeliveryModelTimelineSection from "@/components/sections/delivery-model-timeline";
 import Hero from "@/components/sections/hero";
 import ScrollVideoSection from "@/components/sections/scroll-video";
-
-import { MobileNav, MobileNavHeader, MobileNavMenu, MobileNavToggle, Navbar, NavbarButton, NavbarLogo, NavBody, NavItems } from "@/components/ui/resizable-navbar";
-import { ScrollVelocityContainer, ScrollVelocityRow } from "@/components/ui/scroll-based-velocity";
+import CapabilitiesSection from "@/components/sections/capabilities";
+import FounderSignalSection from "@/components/sections/founder-signal";
+import EngagementFitSection from "@/components/sections/engagement-fit";
+import OperationalQueriesSection from "@/components/sections/operational-queries";
+import TerminalCloseSection from "@/components/sections/terminal-close";
 
 import { Spotlight } from "@/components/ui/spotlight";
-import ThemeToggle from "@/components/ui/theme-toggle";
-import { useLayoutEffect, useState } from "react";
+import CaseStudies from "@/components/sections/case-studies";
+import HomeNavbar from "@/components/home-navbar";
 
 export default function Home() {
   const navItems = [
-    {
-      name: "Features",
-      link: "#features",
-    },
-    {
-      name: "Pricing",
-      link: "#pricing",
-    },
-    {
-      name: "Contact",
-      link: "#contact",
-    },
+    { name: "Outcomes", link: "#case-studies" },
+    { name: "Capabilities", link: "#capabilities" },
+    { name: "Architect", link: "#founder-signal" },
+    { name: "Fit", link: "#engagement-fit" },
+    { name: "Queries", link: "#operational-queries" },
+    { name: "Initiate", link: "#initiate-sequence" },
   ];
-
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  // Pixel-perfect hero centering: measure the fixed navbar's real on-screen height
-  // (including its top offset) and expose it as a CSS variable.
-  useLayoutEffect(() => {
-    const el = document.getElementById("site-navbar");
-    if (!el) return;
-
-    const update = () => {
-      const rect = el.getBoundingClientRect();
-      const clearance = Math.ceil(rect.bottom);
-      document.documentElement.style.setProperty("--nav-clearance", `${clearance}px`);
-    };
-
-    update();
-
-    const ro = new ResizeObserver(update);
-    ro.observe(el);
-    window.addEventListener("resize", update);
-
-    return () => {
-      ro.disconnect();
-      window.removeEventListener("resize", update);
-    };
-  }, []);
 
   return (
     <div className="min-h-svh bg-background text-foreground">
-      <header>
-        <Navbar>
-          {/* Desktop Navigation */}
-          <NavBody>
-            <NavbarLogo />
-            <NavItems items={navItems} />
-            <div className="flex items-center gap-4">
-              <ThemeToggle />
-              {/* <NavbarButton variant="secondary">Login</NavbarButton> */}
-              <NavbarButton variant="primary">Book a call</NavbarButton>
-            </div>
-          </NavBody>
-
-          {/* Mobile Navigation */}
-          <MobileNav>
-            <MobileNavHeader>
-              <NavbarLogo />
-              <div className="flex items-center gap-2">
-                <ThemeToggle />
-                <MobileNavToggle
-                  isOpen={isMobileMenuOpen}
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                />
-              </div>
-            </MobileNavHeader>
-
-            <MobileNavMenu
-              isOpen={isMobileMenuOpen}
-              onClose={() => setIsMobileMenuOpen(false)}
-            >
-              {navItems.map((item, idx) => (
-                <a
-                  key={`mobile-link-${idx}`}
-                  href={item.link}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="relative text-neutral-600 dark:text-neutral-300"
-                >
-                  <span className="block">{item.name}</span>
-                </a>
-              ))}
-              <div className="flex w-full flex-col gap-4">
-                {/* <NavbarButton
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  variant="primary"
-                  className="w-full"
-                >
-                  Login
-                </NavbarButton> */}
-                <NavbarButton
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  variant="primary"
-                  className="w-full"
-                >
-                  Book a call
-                </NavbarButton>
-              </div>
-            </MobileNavMenu>
-          </MobileNav>
-        </Navbar>
-      </header>
+      <HomeNavbar navItems={navItems} />
 
       <main className="mx-auto w-full">
         {/* <div
@@ -146,51 +55,13 @@ export default function Home() {
         <LogoCloud />
         <EshwayStandardSection />
         <DeliveryModelTimelineSection />
-
+        <CaseStudies />
+        <CapabilitiesSection />
+        <FounderSignalSection />
+        <EngagementFitSection />
+        <OperationalQueriesSection />
         <ScrollVideoSection />
-        {/* Example follow-up sections (pattern for scaling the landing page) */}
-        <section
-          id="features"
-          className="mx-auto max-w-5xl scroll-mt-(--nav-clearance,7rem) px-4 py-20 sm:px-6 sm:py-28"
-        >
-          <div className="text-center">
-            <h2 className="text-2xl sm:text-3xl font-geist font-semibold text-foreground">
-              Features
-            </h2>
-            <p className="mt-3 text-sm sm:text-base text-muted-foreground">
-              Add your next sections below the hero — each section should have
-              its own vertical rhythm and an id for nav links.
-            </p>
-          </div>
-        </section>
-
-        <section
-          id="pricing"
-          className="mx-auto max-w-5xl scroll-mt-(--nav-clearance,7rem) px-4 py-20 sm:px-6 sm:py-28"
-        >
-          <div className="text-center">
-            <h2 className="text-2xl sm:text-3xl font-geist font-semibold text-foreground">
-              Pricing
-            </h2>
-            <p className="mt-3 text-sm sm:text-base text-muted-foreground">
-              Placeholder section.
-            </p>
-          </div>
-        </section>
-
-        <section
-          id="contact"
-          className="mx-auto max-w-5xl scroll-mt-(--nav-clearance,7rem) px-4 py-20 sm:px-6 sm:py-28"
-        >
-          <div className="text-center">
-            <h2 className="text-2xl sm:text-3xl font-geist font-semibold text-foreground">
-              Contact
-            </h2>
-            <p className="mt-3 text-sm sm:text-base text-muted-foreground">
-              Placeholder section.
-            </p>
-          </div>
-        </section>
+        <TerminalCloseSection />
       </main>
       {/* <div className="h-screen w-screen overflow-hidden bg-[#121212]">
         <div className="mx-auto mt-32 w-screen max-w-2xl">
