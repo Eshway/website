@@ -71,8 +71,8 @@ const Hero = () => {
 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-3 mt-7 sm:mt-8 items-stretch sm:items-center justify-center w-full sm:w-auto px-2 sm:px-0">
                     {/* WCAG AA contrast with white text (>= 4.5:1). Base #b23ae6 ≈ 4.53:1 */}
-                    <a href="#" className="inline-flex items-center justify-center gap-2 shadow-[0_0_0_1px_hsl(var(--foreground)/0.08)_inset] text-sm sm:text-base font-medium text-white font-geist bg-[#b23ae6] rounded-xl py-3 sm:pt-3 sm:pb-3 px-6 sm:pr-6 sm:pl-6 transition-all hover:bg-[#a63de8] active:scale-[0.98]">Get Started</a>
-                    <a href="#" className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-accent/50 px-6 py-3 text-sm sm:text-base font-medium text-foreground backdrop-blur hover:bg-accent font-geist transition-all active:scale-[0.98]">
+                    <a href="/apply" className="inline-flex items-center justify-center gap-2 shadow-[0_0_0_1px_hsl(var(--foreground)/0.08)_inset] text-sm sm:text-base font-medium text-white font-geist bg-[#b23ae6] rounded-xl py-3 sm:pt-3 sm:pb-3 px-6 sm:pr-6 sm:pl-6 transition-all hover:bg-[#a63de8] active:scale-[0.98]">Get Started</a>
+                    <a href="#case-studies" className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-accent/50 px-6 py-3 text-sm sm:text-base font-medium text-foreground backdrop-blur hover:bg-accent font-geist transition-all active:scale-[0.98]">
                         Learn more
                     </a>
                 </div>
