@@ -11,6 +11,8 @@ import {
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
+import { useEffect } from "react";
+import { createPortal } from "react-dom";
 
 function prefersReducedMotion() {
   if (typeof window === "undefined") return true;
@@ -230,22 +232,76 @@ export const MobileNavMenu = ({
   isOpen,
   onClose,
 }: MobileNavMenuProps) => {
-  return (
+  useEffect(() => {
+    if (!isOpen) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [isOpen]);
+
+  if (typeof document === "undefined") return null;
+
+  // Render into a portal so the overlay isn't affected by transforms on the navbar
+  // (Framer Motion transforms can break `position: fixed` containing blocks).
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className={cn(
-            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-white px-4 py-8 shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] dark:bg-neutral-950",
-            className,
-          )}
+          className="fixed inset-0 z-[100]"
         >
-          {children}
+          {/* Backdrop */}
+          <motion.button
+            type="button"
+            aria-label="Close menu"
+            onClick={onClose}
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          />
+
+          {/* Sliding panel */}
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", stiffness: 240, damping: 26 }}
+            className={cn(
+              "absolute right-0 top-0 flex h-full w-full max-w-[520px] flex-col",
+              "border-l border-white/10 bg-neutral-950/95 shadow-[0_30px_160px_-80px_rgba(0,0,0,0.95)]",
+              className,
+            )}
+          >
+            <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
+              <div className="flex items-center gap-3">
+                <span className="h-2.5 w-2.5 rounded-full bg-white/25" />
+                <span className="h-2.5 w-2.5 rounded-full bg-white/18" />
+                <span className="h-2.5 w-2.5 rounded-full bg-white/12" />
+                <span className="font-mono text-xs text-foreground/65">
+                  eshway://command-center
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={onClose}
+                className="rounded-md p-2 text-foreground/70 hover:bg-white/5 hover:text-foreground"
+                aria-label="Close"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-auto px-5 py-6">{children}</div>
+          </motion.div>
         </motion.div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body,
   );
 };
 
