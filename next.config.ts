@@ -24,6 +24,7 @@ const securityHeaders = [
       "base-uri 'self'",
       "object-src 'none'",
       "frame-ancestors 'none'",
+      "frame-src 'self' https://cal.com https://*.cal.com",
       "form-action 'self'",
       "img-src 'self' data: blob: https:",
       "font-src 'self' data: https:",
