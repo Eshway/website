@@ -5,11 +5,6 @@ import { Moon, Sun } from "lucide-react";
 
 type Theme = "light" | "dark";
 
-function getSystemTheme(): Theme {
-  if (typeof window === "undefined") return "light";
-  return window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-}
-
 function applyTheme(theme: Theme) {
   const root = document.documentElement;
   if (theme === "dark") root.classList.add("dark");
@@ -18,11 +13,11 @@ function applyTheme(theme: Theme) {
 
 export default function ThemeToggle({ className }: { className?: string }) {
   const [mounted, setMounted] = useState(false);
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
     const saved = (localStorage.getItem("theme") as Theme | null) ?? null;
-    const initial = saved ?? getSystemTheme();
+    const initial = saved ?? "dark";
     setTheme(initial);
     applyTheme(initial);
     setMounted(true);
